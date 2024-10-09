@@ -47,3 +47,10 @@ The most densely practical part of this guide.
 Links I like
 - [About evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About%20evaluation.md)
 - [About NLP](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About%20NLP.md)
+
+## Thanks
+This guide has been heavily inspired by the [ML Engineering Guidebook](https://github.com/stas00/ml-engineering) by Stas Bekman! Thanks for this cool resource!
+
+Many thanks also to all the people who inspired this guide through discussions at different events.
+
+## Citation
