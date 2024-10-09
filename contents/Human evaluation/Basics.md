@@ -44,12 +44,13 @@ Pros of systematic human evaluations, especially with paid annotators, are
 Systematic human evaluations present some added issues:
 - **Cost**: If you pay your annotators correctly, this can get expensive fast. It's also likely you'll need rounds of iterative evaluation so that you can refine your guidelines, which adds to the cost.
 - **Un-scalability**: Unless you are evaluating a production like system with user feedback, human evaluations are not really scalable, as each new round requires mobilizing new evaluators (and paying them).
-- **it cannot be reproduced**
+- **Lack of reproducibility**: Unless you keep the exact same annotators continuously and your guidelines are perfectly unambiguous, it's likely some evaluations are going to be hard to reproduce precisely.
+
 ### Casual human evaluation
 Pros of casual human evaluations are:
 - **Lesser cost**: since you rely on your crowd's good will
 - **Edge case discovery**: since you leverage user's creativity in a mostly unbounded manner, you can discover interesting edge cases
-- **Better scalability** (not sure about this as this require people to be willing to participate)
+- **Better scalability**: as long as you have many interested and willing participants, casual human evaluation scales better and has a lower entry cost 
 
 The obvious problems of casual approaches (without annotator selection) are:
 - **High subjectivity**: it's hard to enforce a consistent grading from many community members using broad guidelines, especially since annotators preferences tend to be [culturally bound](https://arxiv.org/abs/2404.16019v1). One can hope that these effect is smoothed over by the sheer scale of the votes, through a "wisdom of the crowd" effect (see Galton's wikipedia page).
