@@ -3,7 +3,10 @@
 - [Foundational Model Development Cheatsheet](https://fmcheatsheet.org/), by AllenAI
 
 ### Automatic evaluation
-- Presentation by Hailey
+Two cool overviews on the challenges of automatic evaluation! 
+- [Challenges in LM evaluation](https://github.com/lm-evaluation-challenges/lm-evaluation-challenges.github.io/blob/main/%5BMain%5D%20ICML%20Tutorial%202024%20-%20Challenges%20in%20LM%20Evaluation.pdf), a presentation by Hailey Schoelkopf and Lintang Sutawika. 
+- [Lessons from the trenches on Reproducible Evaluation of LMs](https://arxiv.org/abs/2405.14782), a paper by EleutherAI
+
 
 ### LLM as a judge
 Cool summaries and experience feedbacks:
