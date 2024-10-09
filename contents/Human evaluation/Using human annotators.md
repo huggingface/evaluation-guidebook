@@ -1,6 +1,6 @@
 I suggest reading Section 3 of this [review](https://aclanthology.org/2024.cl-3.1.pdf) of good practices in data annotation quality. If you want production level quality and have the means to implement all of these methods, go ahead! 
 
-  ![[best_annotation_practices.png]]
+  ![Best_annotation_practices](https://github.com/huggingface/evaluation-guidebook/blob/main/assets/best_annotation_practices.png?raw=true)
 
 However, important guidelines (no matter your project size) are the following, once you defined your task and scoring guidelines.
 
