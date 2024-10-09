@@ -17,7 +17,7 @@ From this, you construct an evaluation, using:
 
 This is more interesting to do on data that the model has never been exposed to before (data absent from the model training set), because you want to test if it **generalizes** well. For example, if it can classify spam emails about 'health' products after having seen only spam emails about fake banks.
 
-Note: *A model which can only predict well on its training data (and has not latently learnt more high-level general patterns) is said to be **overfitting**.*
+Note: *A model which can only predict well on its training data (and has not latently learnt more high-level general patterns) is said to be **overfitting**.* -
 
 ## Pros and cons of using automated benchmarks
 Automated benchmarks have the following advantages:
