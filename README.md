@@ -1,4 +1,4 @@
-# Evaluating your LLM: a guide
+# LLM Evaluation guidebook
 
 Links prefixed by ⭐ are links I enjoyed and recommend reading.
 
@@ -43,6 +43,11 @@ The most densely practical part of this guide.
 - [Troubleshooting inference](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Troubleshooting/Troubleshooting%20inference.md)
 - [Troubleshooting reproducibility](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Troubleshooting/Troubleshooting%20reproducibility.md)
 
+## Planned next articles
+- contents/Automated benchmarks/Metrics -> Description of automatic metrics
+- contents/Introduction: Why do we need to do evaluation?
+- contents/Troubleshooting/Troubleshooting ranking: Why comparing models is hard
+
 ## Resources
 Links I like
 - [About evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About%20evaluation.md)
@@ -51,6 +56,13 @@ Links I like
 ## Thanks
 This guide has been heavily inspired by the [ML Engineering Guidebook](https://github.com/stas00/ml-engineering) by Stas Bekman! Thanks for this cool resource!
 
-Many thanks also to all the people who inspired this guide through discussions at different events.
+Many thanks also to all the people who inspired this guide through discussions either at events or online, notably and not limited to Moritz Hardt (Max Planck Institute), Luca Soldaini, Kyle Lo and Ian Magnusson (Allen AI), Ludwig Schmidt (Anthropic), Max Bartolo (Cohere), Kai Wu (Meta), Swyx and Alessio Fanelli (Latent Space Podcast), Hailey Schoelkopf (EleutherAI), as well as people at Hugging Face, like Lewis Tunstall, Omar Sanseviero, Arthur Zucker, Hynek Kydlíček, Guilherme Penedo and Thom Wolf, without forgetting of course the evaluation team with Nathan Habib and Alina Lozovskaya.
 
 ## Citation
+@misc{fourrier2024evaluation,
+  author = {Fourrier, Clémentine},
+  title = {LLM Evaluation Guidebook},
+  year = {2024},
+  journal = {GitHub repository},
+  url = {https://github.com/huggingface/evaluation-guidebook)
+}
