@@ -11,7 +11,7 @@ However, if you can, all GPUs should be on a single node to avoid inter-node bot
 Not all inference libraries run at the same speed, and some code is more optimized than other. You'll need to experiment a bit to find which libraries have the fastest inference, and if you are using pytorch, I recommend looking at the model inference optimization checklist [here](https://pytorch.org/serve/performance_checklist.html).
 
 ### Changing the precision
-If your model is very slow, you can reduce its size by reducing the precision of the computations. A model stored in float32 does very precise computations (using 32bits per number stored!) that are also very memory and compute heavy - moving to `blfoat16` or `float16` (half the precision) should make the model twice as fast at a loss of precision which should almost not matter. If you want bumps in speed, you can quantize it even more, to 8 or 4 bits (using `gptq` or `bitsandbytes` for example).
+If your model is very slow, you can reduce its size by reducing the precision of the computations. A model stored in float32 does very precise computations (using 32bits per number stored!) that are also very memory and compute heavy - moving to `blfoat16` or `float16` (half the precision) should make the model twice as fast at a loss of precision which should almost not matter. If you want bumps in speed, you can quantize it even more, to 8 or 4 bits (using `gptq` or `bitsandbytes` for example), as n-bit matrix computations should be faster and your model will take even less space in memory (however, some quantization libraries might be a bit slow, so test things out for your use cases!). 
 
 ## My model is very big!
 ### Estimating memory requirements
