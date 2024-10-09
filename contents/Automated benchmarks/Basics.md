@@ -25,11 +25,10 @@ Automated benchmarks have the following advantages:
 - **Scale at limited cost**: They are one of the cheapest way to evaluate models at the moment.
 - **Understandability**: Most automated metrics are very understandable. 
   *Eg: an exact match will tell you if the generated text matches perfectly with the reference, and an accuracy score will tell you in how many cases the selected choice was the correct one (this will be a bit less the case for metrics such as `BLEU` or `ROUGE` for example).*
-- **Dataset quality**: A number of automated benchmarks are using expert generated datasets or pre-existing high quality data (like MMLU or MATH). -
+- **Dataset quality**: A number of automated benchmarks are using expert generated datasets or pre-existing high quality data (like MMLU or MATH). However, this does not mean these datasets are perfect: for MMLU, several errors have been identified in samples afterwards, from parsing issues to actually non-sensical questions, leading to the creation of several follow-up datasets, like MMLU-Pro and MMLU-Redux.
 
 However, they also present the following limitations:
 - **Reduced use on more complex tasks**: Automated benchmarks are working well for tasks where performance is easy to define and assess (for example, classification). More complex capabilities, on the other hand, are harder to decompose into well-defined and precise tasks. 
   *Eg: what does "good at math" mean? Is it being good at arithmetic? - at logic? - able to reason on new mathematical concepts?*
-  This means that people either use more **generalist** evaluations (by not decomposing the capability in actual tasks, but assuming that performance on generic samples will be a **good proxy** for what we aim to measure), or use **more flexible metrics**, like model judges. This is even more the case now that LLM seem to exhibit more and more **generalist** capabilities.  
-  *Eg: there was a debate in the scientific community as to whether LLMs [can draw](https://arxiv.org/abs/2303.12712) unicorns [or not](https://twitter.com/DimitrisPapail/status/1719119242186871275). Most likely not at this point, but clearly an important investigation topic.* -
+  This led to the use of more **generalist** evaluations, which no longer decompose capabilities in sub-tasks, but assuming that general performance will be a **good proxy** for what we aim to measure.  
 - **Contamination**: Once a dataset is published publicly in plain text, it will end up in model training datasets. This means that you have no guarantee when scoring a model that it has not parsed the evaluation data before.
