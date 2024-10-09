@@ -36,12 +36,12 @@ You can aggregate existing data from different sources, evaluating a relevant ca
 There's a whole section on using human annotators in `Human evaluation`, see [Using human annotators](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Human%20evaluation/Using%20human%20annotators.md).
 #### Using synthetic data
 - **Using LLMs**
-On this, you can check the very cool [Cosmopedia](https://huggingface.co/blog/cosmopedia)blog by cool HF colleagues! It's mostly studying how to create a synthetic training dataset, but similar techniques can be used for evaluation. 
+On this, you can check the very cool [Cosmopedia](https://huggingface.co/blog/cosmopedia) blog by cool HF colleagues! It's mostly studying how to create a synthetic training dataset, but similar techniques can be used for evaluation. 
 Make sure to manually check/filter/inspect your dataset afterwards (following the above steps).
 
 - **Using rule-based techniques**
 If your task allows, this is a very good way to get a virtually infinite supply of samples and avoid contamination! 
-For some examples, you can look at [NPHardEval](https://arxiv.org/abs/2312.14890), [DyVal](https://arxiv.org/abs/2309.17167), [MuSR](https://arxiv.org/abs/2310.16049), BabiQA, etc.
+For some examples, you can look at [NPHardEval](https://arxiv.org/abs/2312.14890), [DyVal](https://arxiv.org/abs/2309.17167), [MuSR](https://arxiv.org/abs/2310.16049), BabiQA, [MuSR](https://arxiv.org/abs/2310.16049) etc.
 
 ## Choosing an inference method
 You'll need to choose what kind of inference method you need.
@@ -83,7 +83,7 @@ When defining your prompt, you need to be aware that:
 		- A less costly way is to run your evaluation once using a range of prompt formats allocated to different samples of equivalent difficulty
 - you can provide examples to your model to help it follow the expected format (using few-shot examples), and adding connector words helps this overall
 - but models now tend to overfit specific prompt formats. 
-	- [This paper](https://arxiv.org/abs/2407.07890)is great on the topic, showing notably how some models can be over-evaluated because they have overfitted the test set **format**
+	- [This paper](https://arxiv.org/abs/2407.07890) is great on the topic, showing notably how some models can be over-evaluated because they have overfitted the test set **format**
 	- On the Open LLM Leaderboard 2, we've notably observed that Llama 3.2 and Qwen 2.5 are no longer following the format of the prompt provided in a few-shot setup for this reason.
 - for a number of metrics, you want a very constrained generation or output. 
   *You can learn more about this in the `Constraining model outputs` section of the [Model inference and evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/General%20knowledge/Model%20inference%20and%20evaluation.md) page.*
