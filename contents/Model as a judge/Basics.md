@@ -28,4 +28,4 @@ There are also downside to all of these:
 - They are indeed cheap to instantiate, but paying actual expert human annotators is likely to give you qualitatively better results for your specific use cases.
 
 ## How to start?
-If you want to give it a go, I suggest first reading this [very good guide](https://huggingface.co/learn/cookbook/en/llm_judge) (⭐) by Aymeric Roucher on how to setup your first LLM as judge! -
+If you want to give it a go, I suggest first reading this [very good guide](https://huggingface.co/learn/cookbook/en/llm_judge) (⭐) by Aymeric Roucher on how to setup your first LLM as judge!
