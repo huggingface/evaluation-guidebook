@@ -3,7 +3,7 @@
 	- You can mitigate this by doing self-consistency prompting of your judge, prompting it multiple times and keeping the majority output
 - **Self-preference**: they tend to [favor their own outputs](https://arxiv.org/abs/2404.13076) when scoring answers
 	- You can mitigate this by using a jury
-- **Blindness to input perturbation**: models are bad at identifying [perturbated input](https://arxiv.org/abs/2406.13439)and tangentially [bad at providing consistent score ranges](https://twitter.com/aparnadhinak/status/1748368364395721128) (extended experiments on this [here](https://github.com/LeonEricsson/llmjudge/blob/main/README.md)). For example, if asked to rank text quality on text where noise has been added on a consistent scale, the grades predicted do not reflect this scale. 
+- **Blindness to input perturbation**: models are bad at identifying [perturbated input](https://arxiv.org/abs/2406.13439) and tangentially [bad at providing consistent score ranges](https://twitter.com/aparnadhinak/status/1748368364395721128) (extended experiments on this [here](https://github.com/LeonEricsson/llmjudge/blob/main/README.md)). For example, if asked to rank text quality on text where noise has been added on a consistent scale, the grades predicted do not reflect this scale. 
 	- You can mitigate this by 
 		- asking the model to explain its reasoning [before providing a score](https://twitter.com/seungonekim/status/1749289437165769177)
 		- providing a coherent grading scale in the prompt.
