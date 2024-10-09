@@ -59,6 +59,7 @@ This guide has been heavily inspired by the [ML Engineering Guidebook](https://g
 Many thanks also to all the people who inspired this guide through discussions either at events or online, notably and not limited to Moritz Hardt (Max Planck Institute), Luca Soldaini, Kyle Lo and Ian Magnusson (Allen AI), Ludwig Schmidt (Anthropic), Max Bartolo (Cohere), Kai Wu (Meta), Swyx and Alessio Fanelli (Latent Space Podcast), Hailey Schoelkopf (EleutherAI), as well as people at Hugging Face, like Lewis Tunstall, Omar Sanseviero, Arthur Zucker, Hynek Kydlíček, Guilherme Penedo and Thom Wolf, without forgetting of course the evaluation team with Nathan Habib and Alina Lozovskaya.
 
 ## Citation
+```
 @misc{fourrier2024evaluation,
   author = {Fourrier, Clémentine},
   title = {LLM Evaluation Guidebook},
@@ -66,3 +67,4 @@ Many thanks also to all the people who inspired this guide through discussions e
   journal = {GitHub repository},
   url = {https://github.com/huggingface/evaluation-guidebook)
 }
+```
