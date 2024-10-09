@@ -6,6 +6,9 @@
 Two cool overviews on the challenges of automatic evaluation! 
 - [Challenges in LM evaluation](https://github.com/lm-evaluation-challenges/lm-evaluation-challenges.github.io/blob/main/%5BMain%5D%20ICML%20Tutorial%202024%20-%20Challenges%20in%20LM%20Evaluation.pdf), a presentation by Hailey Schoelkopf and Lintang Sutawika. 
 - [Lessons from the trenches on Reproducible Evaluation of LMs](https://arxiv.org/abs/2405.14782), a paper by EleutherAI
+- Two podcasts by Latent Space on evaluation
+    - [Benchmarks 101](https://www.latent.space/p/benchmarks-101), on automatic benchmarks history and well-known associated issues 
+    - [Benchmarks 201](https://www.latent.space/p/benchmarks-201), on which evaluation method to use when, plus some tidbits about the Leaderboard by yours truly!
 
 
 ### LLM as a judge
