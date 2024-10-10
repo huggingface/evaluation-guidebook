@@ -42,3 +42,11 @@ The best document on the different kinds of parallelism (including data parallel
 CPU offloading moves some of the computations and models parts to CPU, in order to reduce GPU memory usage. It's **considerably slower** than any other method here, mostly because you need to move data from one device to another all the time.
 
 An example of this is [ZeRO-Offload](https://arxiv.org/abs/2101.06840) by Deepspeed, which distributes parameters between CPU and GPU (on top of using other optimization described in the ZeRO-2 paper). On CPU are passed gradients, optimizer states and fp32 model parameter computations during optimisation, whereas on GPU, you'll find fp16 parameters and forward/backward pass, to leverage CPU memory used and GPU computations while minimizing communication between both.
+
+### My model fits on a GPU but I still get OOMs!
+You likely have a problem with your context size, then. 
+
+We recommend: 
+1) testing if your model truly does fit on a GPU with some dummy inference data loaded. This dummy inference data should have a big enough context size (representative of your task)
+2) lowering the batch size, or removing the auto-batch size search which could lead to an accidental OOM error, if you have this enabled
+3) more generally, making sure that samples are presented to your model in inverse context size order, to be sure that your model will fail directly if the context size is too big, and not after having run for X hours.
