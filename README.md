@@ -9,8 +9,7 @@ Whether working with production models, a researcher or a hobbyist, I hope you'l
   If you don't know anything about evaluation, you should start by the  `Basics` sections in each chapter before diving deeper. 
   You'll also find explanations to support you about important LLM topics in `General knowledge`: for example, how model inference works and what tokenization is.
 - **Advanced user**:
-  The more practical sections are the `Tips and Tricks` ones, and `Troubleshooting` chapter. 
-  You can likely skip all `Basics` sections and the `General knowlege` chapter.
+  The more practical sections are the `Tips and Tricks` ones, and `Troubleshooting` chapter. You'll also find interesting things in the `Designing` sections.
 
 In text, links prefixed by ⭐ are links I really enjoyed and recommend reading.
 
