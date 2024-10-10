@@ -1,9 +1,8 @@
-# LLM Evaluation guidebook
+# The LLM Evaluation guidebook ⚖️
 
 If you've ever wondered how to make sure an LLM performs well on your specific task, this guide is for you! 
 
-Whether working with production models, a researcher or a hobbyist, I hope you'll find what you need! 
-If not, feel free to open an issue and I'll complete the guide. You can also open an issue to suggest papers or resources I missed.
+Whether working with production models, a researcher or a hobbyist, I hope you'll find what you need; and if not, open an issue (to suggest ameliorations or missing resources) and I'll complete the guide!
 
 ## How to read this guide
 - **Beginner user**
