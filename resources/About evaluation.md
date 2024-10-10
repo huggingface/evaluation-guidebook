@@ -8,7 +8,7 @@ Two cool overviews on the challenges of automatic evaluation!
 - [Lessons from the trenches on Reproducible Evaluation of LMs](https://arxiv.org/abs/2405.14782), a paper by EleutherAI
 - Two podcasts by Latent Space on evaluation
     - [Benchmarks 101](https://www.latent.space/p/benchmarks-101), on automatic benchmarks history and well-known associated issues 
-    - [Benchmarks 201](https://www.latent.space/p/benchmarks-201), on which evaluation method to use when, plus some tidbits about the Leaderboard by yours truly!
+    - [Benchmarks 201](https://www.latent.space/p/benchmarks-201), on which evaluation method to use when, plus some tidbits about the Leaderboard with yours truly!
 
 
 ### LLM as a judge
