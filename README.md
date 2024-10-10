@@ -41,7 +41,7 @@ The most densely practical part of this guide.
 
 ### General knowledge
 These are mostly beginner guides to LLM basics, but will still contain some tips and cool references! 
-If you're a advanced user, I suggest skimming to the `Going further` sections.
+If you're an advanced user, I suggest skimming to the `Going further` sections.
 - [Model inference and evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/General%20knowledge/Model%20inference%20and%20evaluation.md)
 - [Tokenization](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/General%20knowledge/Tokenization.md)
 
