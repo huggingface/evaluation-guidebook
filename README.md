@@ -1,6 +1,7 @@
 # The LLM Evaluation guidebook ⚖️
 
 If you've ever wondered how to make sure an LLM performs well on your specific task, this guide is for you! 
+It covers the different ways you can evaluate a model, guides on designing your own evaluations, and tips and tricks from practical experience.
 
 Whether working with production models, a researcher or a hobbyist, I hope you'll find what you need; and if not, open an issue (to suggest ameliorations or missing resources) and I'll complete the guide!
 
@@ -47,6 +48,7 @@ If you're a advanced user, I suggest skimming to the `Going further` sections.
 ## Planned next articles
 - contents/Automated benchmarks/Metrics -> Description of automatic metrics
 - contents/Introduction: Why do we need to do evaluation?
+- contents/Thinkg about evaluation: What are the high level things you always need to consider when building your task? 
 - contents/Troubleshooting/Troubleshooting ranking: Why comparing models is hard
 
 ## Resources
