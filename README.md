@@ -5,10 +5,10 @@ If you've ever wondered how to make sure an LLM performs well on your specific t
 Whether working with production models, a researcher or a hobbyist, I hope you'll find what you need; and if not, open an issue (to suggest ameliorations or missing resources) and I'll complete the guide!
 
 ## How to read this guide
-- **Beginner user**
-  If you don't know anything about the topic, you should read the  `Basics` sections in each chapter, and explore the sections that interest you. 
+- **Beginner user**: 
+  If you don't know anything about evaluation, you should start by the  `Basics` sections in each chapter before diving deeper. 
   You'll also find explanations to support you about important LLM topics in `General knowledge`: for example, how model inference works and what tokenization is.
-- **Advanced user**
+- **Advanced user**:
   The more practical sections are the `Tips and Tricks` ones, and `Troubleshooting` chapter. 
   You can likely skip all `Basics` sections and the `General knowlege` chapter.
 
