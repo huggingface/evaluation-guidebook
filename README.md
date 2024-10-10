@@ -15,9 +15,7 @@ Whether working with production models, a researcher or a hobbyist, I hope you'l
 In text, links prefixed by ⭐ are links I really enjoyed and recommend reading.
 
 ## Table of contents
-
-### Intro
-I'll add this section later, but if you want an intro on the topic, you can read this [blog](https://huggingface.co/blog/clefourrier/llm-evaluation) on how and why we do evaluation!
+If you want an intro on the topic, you can read this [blog](https://huggingface.co/blog/clefourrier/llm-evaluation) on how and why we do evaluation!
 
 ### Automatic benchmarks
 - [Basics](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Automated%20benchmarks/Basics.md)
@@ -36,16 +34,16 @@ I'll add this section later, but if you want an intro on the topic, you can read
 - [Evaluating your evaluator](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model%20as%20a%20judge/Evaluating%20your%20evaluator.md)
 - [Tips and tricks](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model%20as%20a%20judge/Tips%20and%20tricks.md)
 
+### Troubleshooting
+The most densely practical part of this guide. 
+- [Troubleshooting inference](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Troubleshooting/Troubleshooting%20inference.md)
+- [Troubleshooting reproducibility](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Troubleshooting/Troubleshooting%20reproducibility.md)
+
 ### General knowledge
 These are mostly beginner guides to LLM basics, but will still contain some tips and cool references! 
 If you're a advanced user, I suggest skimming to the `Going further` sections.
 - [Model inference and evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/General%20knowledge/Model%20inference%20and%20evaluation.md)
 - [Tokenization](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/General%20knowledge/Tokenization.md)
-
-### Troubleshooting
-The most densely practical part of this guide. 
-- [Troubleshooting inference](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Troubleshooting/Troubleshooting%20inference.md)
-- [Troubleshooting reproducibility](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Troubleshooting/Troubleshooting%20reproducibility.md)
 
 ## Planned next articles
 - contents/Automated benchmarks/Metrics -> Description of automatic metrics
