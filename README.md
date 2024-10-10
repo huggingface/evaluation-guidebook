@@ -1,6 +1,9 @@
 # LLM Evaluation guidebook
 
-Links prefixed by ⭐ are links I enjoyed and recommend reading.
+If you've ever wondered how to make sure an LLM performs well on your specific task, this guide is for you! 
+
+Whether working with production models, a researcher or a hobbyist, I hope you'll find what you need! 
+If not, feel free to open an issue and I'll complete the guide. You can also open an issue to suggest papers or resources I missed.
 
 ## How to read this guide
 - **Beginner user**
@@ -9,6 +12,8 @@ Links prefixed by ⭐ are links I enjoyed and recommend reading.
 - **Advanced user**
   The more practical sections are the `Tips and Tricks` ones, and `Troubleshooting` chapter. 
   You can likely skip all `Basics` sections and the `General knowlege` chapter.
+
+In text, links prefixed by ⭐ are links I really enjoyed and recommend reading.
 
 ## Table of contents
 
