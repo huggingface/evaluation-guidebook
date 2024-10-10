@@ -61,6 +61,7 @@ This guide has been heavily inspired by the [ML Engineering Guidebook](https://g
 
 Many thanks also to all the people who inspired this guide through discussions either at events or online, notably and not limited to:
 - 🤝 Luca Soldaini, Kyle Lo and Ian Magnusson (Allen AI), Max Bartolo (Cohere), Kai Wu (Meta), Swyx and Alessio Fanelli (Latent Space Podcast), Hailey Schoelkopf (EleutherAI), Martin Signoux (Open AI), Moritz Hardt (Max Planck Institute), Ludwig Schmidt (Anthropic)
+- 🔥 community users of the Open LLM Leaderboard and lighteval, who often raised very interesting points in discussions
 - 🤗 people at Hugging Face, like Lewis Tunstall, Omar Sanseviero, Arthur Zucker, Hynek Kydlíček, Guilherme Penedo and Thom Wolf,
 - of course my team ❤️ doing evaluation and leaderboards, Nathan Habib and Alina Lozovskaya.
 
