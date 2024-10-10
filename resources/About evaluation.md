@@ -19,14 +19,14 @@ Cool summaries and experience feedbacks:
 
 ## Software
 ### Evaluation suites
-- [`lm_eval`](https://github.com/EleutherAI/lm-evaluation-harness/), by Eleuther (also known as "the Harness"). The powerhouse of LLM evaluations, allowing you to evaluate any LLMs from many providers on a range of benchmarks, in a stable and reproducible.
+- [`lm_eval`](https://github.com/EleutherAI/lm-evaluation-harness/), by Eleuther (also known as "the Harness"). The powerhouse of LLM evaluations, allowing you to evaluate any LLMs from many providers on a range of benchmarks, in a stable and reproducible way.
 - [`lighteval`](https://github.com/huggingface/lighteval), by Hugging Face (disclaimer: I'm one of the authors). A light LLM evaluation suite, focused on customization and recent benchmarks.
 
 ### Leaderboards
 - [Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard), by Hugging Face. 
   Neutral 3rd party evaluation of Open LLMs on reference static benchmarks (open to submissions)
 - [HELM](https://crfm.stanford.edu/helm/lite/latest/#/leaderboard), by Stanford. 
-  Also evaluates models on statif benchmarks, but uses win-rates to rank models
+  Also evaluates models on static benchmarks, but uses win-rates to rank models
 - [Chatbot Arena](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard), by LMSys 
   Arena using crowdsourced human evaluation to score 150 LLMs
 - [LLM Performance Leaderboard](https://huggingface.co/spaces/ArtificialAnalysis/LLM-Performance-Leaderboard), by Artificial Analysis
