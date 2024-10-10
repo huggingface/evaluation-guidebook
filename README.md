@@ -58,7 +58,10 @@ Links I like
 ## Thanks
 This guide has been heavily inspired by the [ML Engineering Guidebook](https://github.com/stas00/ml-engineering) by Stas Bekman! Thanks for this cool resource!
 
-Many thanks also to all the people who inspired this guide through discussions either at events or online, notably and not limited to Moritz Hardt (Max Planck Institute), Luca Soldaini, Kyle Lo and Ian Magnusson (Allen AI), Ludwig Schmidt (Anthropic), Max Bartolo (Cohere), Kai Wu (Meta), Swyx and Alessio Fanelli (Latent Space Podcast), Hailey Schoelkopf (EleutherAI), as well as people at Hugging Face, like Lewis Tunstall, Omar Sanseviero, Arthur Zucker, Hynek Kydlíček, Guilherme Penedo and Thom Wolf, without forgetting of course the evaluation team with Nathan Habib and Alina Lozovskaya.
+Many thanks also to all the people who inspired this guide through discussions either at events or online, notably and not limited to:
+- 🤝 Luca Soldaini, Kyle Lo and Ian Magnusson (Allen AI), Max Bartolo (Cohere), Kai Wu (Meta), Swyx and Alessio Fanelli (Latent Space Podcast), Hailey Schoelkopf (EleutherAI), Moritz Hardt (Max Planck Institute), Ludwig Schmidt (Anthropic)
+- 🤗 people at Hugging Face, like Lewis Tunstall, Omar Sanseviero, Arthur Zucker, Hynek Kydlíček, Guilherme Penedo and Thom Wolf,
+- of course my team ❤️ doing evaluation and leaderboards, Nathan Habib and Alina Lozovskaya.
 
 ## Citation
 ```
