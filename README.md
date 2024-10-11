@@ -48,7 +48,7 @@ If you're a advanced user, I suggest skimming to the `Going further` sections.
 ## Planned next articles
 - contents/Automated benchmarks/Metrics -> Description of automatic metrics
 - contents/Introduction: Why do we need to do evaluation?
-- contents/Thinkg about evaluation: What are the high level things you always need to consider when building your task? 
+- contents/Thinking about evaluation: What are the high level things you always need to consider when building your task?
 - contents/Troubleshooting/Troubleshooting ranking: Why comparing models is hard
 
 ## Resources

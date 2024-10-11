@@ -27,7 +27,7 @@ When looking at an MCQA evaluation, you'll likely encounter a number of issues r
 
 In general, you want to tokenize the context together with the choices, as it creates a succession of tokens which is likely/natural for the model. 
 
-However, some tokenizers (like the [Llama one](https://github.com/EleutherAI/lm-evaluation-harness/pull/531#issuecomment-1595586257)) do not satisfy `enc(context + choice) = enc(context) + enc(choice)` (and add or remove spacing). This means that comparing the logprobabilities of the choices is not easy, as the context tokens can "bleed out" into them, messing up the comparision.
+However, some tokenizers (like the [Llama one](https://github.com/EleutherAI/lm-evaluation-harness/pull/531#issuecomment-1595586257)) do not satisfy `enc(context + choice) = enc(context) + enc(choice)` (and add or remove spacing). This means that comparing the logprobabilities of the choices is not easy, as the context tokens can "bleed out" into them, messing up the comparison.
 
 So if this is the case for your model, you might want to compute the tokens of context and choice separately and then concatenate them after removing the special start/end of sentence tokens which might have been added.
 
@@ -56,5 +56,5 @@ The first thing to do is always to inspect your model generations in detail. Som
 - unability of the models to follow your output format in few shot (frequent in recent models trained with instructions data, like llama 3.2 or Qwen 2.5)
     - Fixing: either adapt your prompt format, or just assume that models should be able to follow it in few shot
 - exceedingly verbose model which never gets to the correct answer (more frequent in long context models and something we observed with Qwen and CommandR models)
-    - Fixing: either increase the allowed context length, add instructions to be concise in the task prompt, or just assume that models should be able to answer succintly
+    - Fixing: either increase the allowed context length, add instructions to be concise in the task prompt, or just assume that models should be able to answer succinctly
 

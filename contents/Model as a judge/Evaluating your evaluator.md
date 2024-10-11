@@ -12,7 +12,7 @@ You don't necessarily need a lot of examples (50 can be enough), but you need th
 ## 2. Pick your metric
 Your metric will be used to compare your judge's evaluations with your reference. 
 
-In general, this comparison is considerably easier to do if your model is predicting binary classes or doing pairwise comparison, as you'll be able to compute accuracy (for pairwise comparision), or precision and recall (for binary classes), which are all very easy to interpret metrics. 
+In general, this comparison is considerably easier to do if your model is predicting binary classes or doing pairwise comparison, as you'll be able to compute accuracy (for pairwise comparison), or precision and recall (for binary classes), which are all very easy to interpret metrics. 
 
 Comparing the correlation of scores with human or model scoring will be harder to do. To understand why in more detail, I advise you to read this cool [blog section on the topic](https://eugeneyan.com/writing/llm-evaluators/#key-considerations-before-adopting-an-llm-evaluator).
 
@@ -21,7 +21,7 @@ In general, if you're a bit lost about what metrics to pick when (in terms of mo
 ## 3. Evaluate your evaluator
 For this step, you simply need to use your model and its prompt to evaluate your test samples! Then, once you get the evaluations, use your above metric and reference to compute a score for your evaluations.
 
-You need to decide what your threshold for acceptance is. Depending on how hard your task is, you can aim for 80% to 95% accuracy, if you're doing pairwise comparision. Regarding correlations (if you're using scores), people in the litterature tend to seem happy with 0.8 Pearson correlation with a reference. However, I've seen some papers declare that 0.3 indicates a good correlation with human annotators (^^") so ymmv.
+You need to decide what your threshold for acceptance is. Depending on how hard your task is, you can aim for 80% to 95% accuracy, if you're doing pairwise comparison. Regarding correlations (if you're using scores), people in the literature tend to seem happy with 0.8 Pearson correlation with a reference. However, I've seen some papers declare that 0.3 indicates a good correlation with human annotators (^^") so ymmv.
 
 
 

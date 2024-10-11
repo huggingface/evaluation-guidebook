@@ -18,7 +18,7 @@ They are used on 3 main tasks:
 ## Pros and cons of using judge-LLMs
 Judge LLMs have been used for the following points:
 - **Objectivity** when compared to humans: They automate empirical judgments in an objective and reproducible manner
-- **Scale and reproduciblity**: They are more scalable than human annotators, which allows to reproduce scoring on large amounts of data.
+- **Scale and reproducibility**: They are more scalable than human annotators, which allows to reproduce scoring on large amounts of data.
 - **Cost**: They are cheap to instantiate, as they don't require to train a new model, and can just rely on good prompting and an existing high quality LLM. They are also cheaper than paying actual human annotators.
 - **Alignment with human judgments**: They are somehow correlated with human judgments.
 

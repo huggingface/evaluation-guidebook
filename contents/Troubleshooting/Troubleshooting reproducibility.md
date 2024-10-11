@@ -55,7 +55,7 @@ This [great paper](https://arxiv.org/abs/2407.07890)⭐ also highlights a side e
 
 This is something we observed on the Open LLM Leaderboard 2 for the Llama3.1 models. They were predicting the correct answers to our MATH-Hard evaluations, but were getting low scores, being unable to fit to the template provided in few-shot because they overfit the GSM8K prompt and answer format (another math eval).
 ### System prompt and chat template
-Chat models usually have been through instruction/preference training or fine-tuning. During this stage, they have learned to follow specific templates when infering. For example, templates can require starting rounds of dialogue with a general prompt (called the `system prompt`) prefixed by specific tokens (usually `System: `). Said prompt is here to provide high-level instructions for the model, such as the contents of a persona, or general answering style instructions. Rounds of dialogue can also require adding prefix key words to text, such as `User` for queries and `Assistant` for answers.
+Chat models usually have been through instruction/preference training or fine-tuning. During this stage, they have learned to follow specific templates when inferring. For example, templates can require starting rounds of dialogue with a general prompt (called the `system prompt`) prefixed by specific tokens (usually `System: `). Said prompt is here to provide high-level instructions for the model, such as the contents of a persona, or general answering style instructions. Rounds of dialogue can also require adding prefix key words to text, such as `User` for queries and `Assistant` for answers.
 
 When using few shot, you also need to select if you want examples to be provided multi-turn (mimicking user/assistant turns) or all at once (in a single user prompt).
 
@@ -85,4 +85,4 @@ Some sources of differences that we have observed are:
 - using **different batch sizes**. 
   It's been documented in several evaluation libraries and model backends that using different batch sizes will change inference results - if you want fully reproducible evaluations, you should fix the batch size, though it might not always be possible for memory issues
 - using **different loading precision** for your model weights.
-  Using a lower precision can reduce memory and inference costs, but it will also change the numerical results, since you are using different versions of the weigths.
+  Using a lower precision can reduce memory and inference costs, but it will also change the numerical results, since you are using different versions of the weights.
