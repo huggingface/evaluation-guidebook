@@ -98,7 +98,7 @@ You'll need to
 	- They are very important for specific tasks, such as math evaluations, where you might want to extract your result from formatted outputs.
 	- They will also be important if you want to evaluate with added mechanisms for accuracy, such as Chain of Thought, as you'll need to remove the reasoning trace from the actual result
 2. decide how you compare the generation with the reference. 
-   You could use anything ranging from match-based metrics (exact match, prefix match, etc) to summarization and translation metrics (ROUGE, BLEU, character n gram comparisions). For a list of existing metrics, you can look [here](https://github.com/huggingface/lighteval/wiki/Metric-List), I'll add a section later on which metric to use when.
+   You could use anything ranging from match-based metrics (exact match, prefix match, etc) to summarization and translation metrics (ROUGE, BLEU, character n gram comparisons). For a list of existing metrics, you can look [here](https://github.com/huggingface/lighteval/wiki/Metric-List), I'll add a section later on which metric to use when.
 
 More generally, when picking your metric, you need to keep in mind what your task is really about. For some domains (ex: medical, chatbots with public interaction), you don't want to measure the average performance, but need a way to evaluate the **worst performance** you'll get (on medical quality of output, on toxicity, etc). (*To go further, take a look at this [blog](https://ehudreiter.com/2024/07/10/challenges-in-evaluating-llms/)*)
 
