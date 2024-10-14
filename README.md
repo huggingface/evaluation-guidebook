@@ -74,7 +74,7 @@ Many thanks also to all the people who inspired this guide through discussions e
 
 ```
 @misc{fourrier2024evaluation,
-  author = {Fourrier, Clémentine},
+  author = {Clémentine Fourrier and The Hugging Face Community},
   title = {LLM Evaluation Guidebook},
   year = {2024},
   journal = {GitHub repository},
