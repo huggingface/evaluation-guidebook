@@ -17,7 +17,7 @@ Some reward models such as [SteerLM](https://arxiv.org/abs/2311.09528) output on
 These models can be easier to use for evaluation, but are also harder to collect data for. 
 More recently models have been proposed that output both absolute and relative scores, such as [HelpSteer2-Preference](https://arxiv.org/abs/2410.01257) and [ArmoRM](https://arxiv.org/abs/2406.12845).
 
-Another type of reward model are pair-wise models, which output a single score for a pair of completions ([example](https://huggingface.co/RLHFlow/pair-preference-model-LLaMA3-8B)).
+Another type of reward model is a pair-wise model, which output a single score for a pair of completions ([example](https://huggingface.co/RLHFlow/pair-preference-model-LLaMA3-8B)).
 These models have the advantage of being able to judge subtle differences between completions (at least in theory), 
  but at the cost of not being able to easily save and compare many different scores for the same test set.
 In addition, context length and memory limits can become an issue when comparing two long completions.
