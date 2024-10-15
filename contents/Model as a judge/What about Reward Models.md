@@ -30,11 +30,11 @@ Given a dataset of prompts, we can generate completions from a language model an
 
 For models that give absolute scores, the resulting scores can be averaged to get a reasonable summary score.
 
-However, in the more common case of relative scores, although the average reward can be a valid metric to look at, it can often be biased by a few very good or very bad completions,  as different prompts may have different reward scales due to them being easier or harder to evaluate.
+However, in the more common case of relative scores, the average reward can be biased by outliers (a few very good or very bad completions) as different prompts may have inherently different reward scales (some prompts are way harder or easier than others).
 
-Instead, we can take a reference set of completions and calculate the percentage of completions from the model that are ranked higher than the reference completions.
-
-Another useful metric is the mean probability of the completions being better than the reference completions, which can give a more fine-grained and smoothly changing signal.
+Instead, we can use 
+- win rates: take a reference set of completions and calculate the percentage of completions from the model that are ranked higher than the reference completions. It is slightly more granular. 
+- win probabilities: the mean probability of the completions being better than the reference completions, which can give a more fine-grained and smoothly changing signal.
 
 ## Pros and Cons of Reward Models
 
@@ -50,6 +50,7 @@ On the other hand they:
 
 ## Tips and Tricks for using Reward Models for Evaluation
 
-* A good place to find high performing models is the [RewardBench Leaderboard](https://huggingface.co/spaces/allenai/reward-bench).
-* For reward models that rate single prompts and completions, you can cache the scores of many reference models and easily see how a new model performs.
+- A good place to find high performing models is the [RewardBench Leaderboard](https://huggingface.co/spaces/allenai/reward-bench).
+- You can look at how reward models have been used in the [Nemotron](https://arxiv.org/abs/2406.11704) paper. 
+- For reward models that rate single prompts and completions, you can cache the scores of many reference models and easily see how a new model performs.
 
