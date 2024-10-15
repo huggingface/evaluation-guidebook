@@ -32,6 +32,7 @@ If you want an intro on the topic, you can read this [blog](https://huggingface.
 - [Getting a Judge-LLM](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model%20as%20a%20judge/Getting%20a%20Judge-LLM.md)
 - [Designing your evaluation prompt](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model%20as%20a%20judge/Designing%20your%20evaluation%20prompt.md)
 - [Evaluating your evaluator](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model%20as%20a%20judge/Evaluating%20your%20evaluator.md)
+- [What about reward models](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model%20as%20a%20judge/What%20about%20Reward%20Models.md)
 - [Tips and tricks](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model%20as%20a%20judge/Tips%20and%20tricks.md)
 
 ### Troubleshooting
