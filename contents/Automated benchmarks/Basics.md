@@ -1,3 +1,5 @@
+# Basics
+
 *Note: Some of this overlaps with [my general blog on evals](https://huggingface.co/blog/clefourrier/llm-evaluation)*
 ## What are automated benchmarks?
 
