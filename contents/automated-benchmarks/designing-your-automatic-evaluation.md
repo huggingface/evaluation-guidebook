@@ -1,3 +1,5 @@
+# Designing your automatic evaluation
+
 ## Choosing a dataset
 For your evaluation, you can either select an existing dataset (see [Some evaluation datasets](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Automated%20benchmarks/Some%20evaluation%20datasets.md) for examples) or design your own. Through this process, it's very important to keep in mind that **your evaluation result will only be as good as your evaluation dataset**.
 

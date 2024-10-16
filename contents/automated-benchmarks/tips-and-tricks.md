@@ -1,3 +1,5 @@
+# Tips and tricks
+
 ## Managing contamination
 In general, you should assume that a dataset publicly available on the internet is or will be contaminated. 
 
