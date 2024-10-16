@@ -1,3 +1,5 @@
+# Troubleshooting reproducibility
+
 Let's say you have read a recent tech report about a cool new model, and you want to reproduce their results on your machine... but you're not managing to?
 Let's explore why.
 
@@ -62,7 +64,7 @@ When using few shot, you also need to select if you want examples to be provided
 Not following the chat template expected by the model at inference will kill its performance, as it will drive its output outside of the probability space it's been converging on.
 
 ### Few-shots samples
-Two things are easy to mess up with few-shot samples (see `General knowledge/Model inference` if you're unsure what it is).
+Two things are easy to mess up with few-shot samples (see `general-knowledge/Model inference` if you're unsure what it is).
 
 Obviously, you need to use the **same number of few-shot samples** as your task of reference. 
 

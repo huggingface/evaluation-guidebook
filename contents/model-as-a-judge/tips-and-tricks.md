@@ -1,4 +1,7 @@
+# Tips and tricks
+
 ## Mitigating well known biases of LLM as judges: 
+
 - **Lack of internal consistency**: a judge might give you different judgments if you prompt it several times (if the temperature is not 0)
 	- You can mitigate this by doing self-consistency prompting of your judge, prompting it multiple times and keeping the majority output
 - **Self-preference**: they tend to [favor their own outputs](https://arxiv.org/abs/2404.13076) when scoring answers
@@ -19,6 +22,7 @@
 	- You can mitigate this by paying attention to the training prompt format (if the model was instruction tuned) and ensuring you follow it.
 
 ## Picking correct tasks for an LLM judge
+
 LLM evaluators:
 - are **bad at identifying hallucinations** in general, particularly what are called partial hallucinations (which look close to the ground truth but are actually slightly different) (see [this](https://arxiv.org/abs/2305.11747) and [this](https://arxiv.org/abs/2303.08896))
 - have a low to OK-ish correlation with human annotators on [summarization](https://arxiv.org/abs/2304.02554) ([here too](https://arxiv.org/abs/2303.16634)), [faithfulness](https://arxiv.org/abs/2307.16877), and are not consistently correlated with human judgement more broadly against [a scope of tasks](https://arxiv.org/abs/2406.18403)

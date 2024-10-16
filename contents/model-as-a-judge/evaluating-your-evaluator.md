@@ -1,3 +1,5 @@
+# Evaluating your evaluator
+
 Before using a judge-LLM in production or at scale, you want to first evaluate its quality for your task, to make sure its scores are actually relevant and useful for you. 
 
 Note: *This will be easier to do if it predicts binary outputs, because you'll be able to interpretable classification metrics (accuracy/recall/precision). If it predicts scores on a scale, it will be much harder to estimate the quality of the correlation with a reference.* 

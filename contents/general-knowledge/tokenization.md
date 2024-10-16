@@ -1,3 +1,5 @@
+# Tokenization
+
 ## Why and how do we tokenize text?
 Since large language models are actually big mathematical functions, they eat numbers, not text. 
 

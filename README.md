@@ -18,44 +18,44 @@ In text, links prefixed by ⭐ are links I really enjoyed and recommend reading.
 If you want an intro on the topic, you can read this [blog](https://huggingface.co/blog/clefourrier/llm-evaluation) on how and why we do evaluation!
 
 ### Automatic benchmarks
-- [Basics](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Automated%20benchmarks/Basics.md)
-- [Designing your automatic evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Automated%20benchmarks/Designing%20your%20automatic%20evaluation.md)
-- [Some evaluation datasets](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Automated%20benchmarks/Some%20evaluation%20datasets.md)
-- [Tips and tricks](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Automated%20benchmarks/Tips%20and%20tricks.md)
+- [Basics](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/automated-benchmarks/basics.md)
+- [Designing your automatic evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Automated-benchmarks/Designing-your-automatic-evaluation.md)
+- [Some evaluation datasets](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Automated-benchmarks/Some-evaluation-datasets.md)
+- [Tips and tricks](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Automated-benchmarks/Tips-and-tricks.md)
 
 ### Human evaluation
-- [Basics](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Human%20evaluation/Basics.md)
-- [Using human annotators](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Human%20evaluation/Using%20human%20annotators.md)
+- [Basics](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Human-evaluation/Basics.md)
+- [Using human annotators](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Human-evaluation/Using-human-annotators.md)
 
 ### LLM-as-a-judge
-- [Basics](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model%20as%20a%20judge/Basics.md)
-- [Getting a Judge-LLM](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model%20as%20a%20judge/Getting%20a%20Judge-LLM.md)
-- [Designing your evaluation prompt](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model%20as%20a%20judge/Designing%20your%20evaluation%20prompt.md)
-- [Evaluating your evaluator](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model%20as%20a%20judge/Evaluating%20your%20evaluator.md)
-- [What about reward models](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model%20as%20a%20judge/What%20about%20Reward%20Models.md)
-- [Tips and tricks](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model%20as%20a%20judge/Tips%20and%20tricks.md)
+- [Basics](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model-as-a-judge/Basics.md)
+- [Getting a Judge-LLM](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model-as-a-judge/Getting-a-Judge-LLM.md)
+- [Designing your evaluation prompt](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model-as-a-judge/Designing-your-evaluation-prompt.md)
+- [Evaluating your evaluator](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model-as-a-judge/Evaluating-your-evaluator.md)
+- [What about reward models](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model-as-a-judge/What-about-Reward-Models.md)
+- [Tips and tricks](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model-as-a-judge/Tips-and-tricks.md)
 
 ### Troubleshooting
 The most densely practical part of this guide. 
-- [Troubleshooting inference](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Troubleshooting/Troubleshooting%20inference.md)
-- [Troubleshooting reproducibility](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Troubleshooting/Troubleshooting%20reproducibility.md)
+- [Troubleshooting inference](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Troubleshooting/Troubleshooting-inference.md)
+- [Troubleshooting reproducibility](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Troubleshooting/Troubleshooting-reproducibility.md)
 
 ### General knowledge
 These are mostly beginner guides to LLM basics, but will still contain some tips and cool references! 
 If you're an advanced user, I suggest skimming to the `Going further` sections.
-- [Model inference and evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/General%20knowledge/Model%20inference%20and%20evaluation.md)
-- [Tokenization](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/General%20knowledge/Tokenization.md)
+- [Model inference and evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/General-knowledge/Model-inference-and-evaluation.md)
+- [Tokenization](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/General-knowledge/Tokenization.md)
 
 ## Planned next articles
-- contents/Automated benchmarks/Metrics -> Description of automatic metrics
+- contents/automated-benchmarks/Metrics -> Description of automatic metrics
 - contents/Introduction: Why do we need to do evaluation?
 - contents/Thinking about evaluation: What are the high level things you always need to consider when building your task?
 - contents/Troubleshooting/Troubleshooting ranking: Why comparing models is hard
 
 ## Resources
 Links I like
-- [About evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About%20evaluation.md)
-- [About NLP](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About%20NLP.md)
+- [About evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About-evaluation.md)
+- [About NLP](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About-NLP.md)
 
 ## Thanks
 This guide has been heavily inspired by the [ML Engineering Guidebook](https://github.com/stas00/ml-engineering) by Stas Bekman! Thanks for this cool resource!
@@ -71,7 +71,7 @@ Many thanks also to all the people who inspired this guide through discussions e
 
 [cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
-[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC-BY--NC--SA-4.0-lightgrey.svg
 
 ```
 @misc{fourrier2024evaluation,

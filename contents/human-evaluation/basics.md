@@ -1,3 +1,5 @@
+# Basics
+
 ## What is human evaluation?
 Human evaluation is simply asking humans to evaluate models. 
 In this document, we'll look at post-hoc evaluation: your model has been trained, you have a given task in mind, and humans are providing scores.

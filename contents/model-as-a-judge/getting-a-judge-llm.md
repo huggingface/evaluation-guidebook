@@ -1,5 +1,9 @@
+# Getting a Judge-LLM
+
 When using an existing LLM, you can go for [generalist, high capability models](https://arxiv.org/abs/2306.05685v4),  using [small specialist models](https://arxiv.org/pdf/2405.01535) trained specifically to discriminate from preference data, or training your own.
+
 ## Using a generalist LLM
+
 With the introduction of more capable LLMs (such as ChatGPT), some researchers started exploring using big models as judges. The best current big model judges tend to be closed source models (like Claude or gpt-o models) though the gap with open source is closing very fast thanks to high quality models such as [Qwen 2.5](https://huggingface.co/collections/Qwen/qwen25-66e81a666513e518adb90d9e), [Command R+](https://huggingface.co/CohereForAI/c4ai-command-r-plus-08-2024) or [Llama 3.1-405-Instruct](meta-llama/Llama-3.1-405B-Instruct). 
 
 Closed source models, despite their performance, present the multiple disadvantages of being:
@@ -10,7 +14,9 @@ Closed source models, despite their performance, present the multiple disadvanta
 However, they also allow anyone to have access to a high quality model without needing to setup things locally or requiring access to hardware. This pros are now also present for most high quality open models, which are accessible through model providers, and solve the first 2 problems above.
 
 You'll find a good cost analysis of model providers [here](https://huggingface.co/spaces/ArtificialAnalysis/LLM-Performance-Leaderboard) if you need help picking one.
+
 ## Using a tiny specialized LLM judge model
+
 You can also make the choice to use tiny specialized LLM judges. With often a couple billion parameters, they can run locally on most recent consumer hardware, while being trained from scratch or fine-tuned using instruction data. You often need to follow their specific prompt formats.
 
 Some existing models:

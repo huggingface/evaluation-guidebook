@@ -1,3 +1,5 @@
+# Troubleshooting inference
+
 ## My model is very slow!
 ### Changing the batch size
 If you want absolute reproducibility (given a specific hardware and a specific evaluation prompt), you're probably using a batch size of one. However, moving to higher batch sizes will likely make your evaluation faster (given that it fits within the memory requirements of your hardware)
