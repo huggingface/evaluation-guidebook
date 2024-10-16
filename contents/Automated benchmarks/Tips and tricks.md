@@ -20,12 +20,11 @@ It's also very important to not assume that different tokenizers will behave the
 
 ![Spacing, tokenization and template](https://pbs.twimg.com/media/GPANfpiasAA9b6F?format=png&name=medium)
 
-### Tokenization and MCQA evaluations
-When looking at an MCQA evaluation, you'll likely encounter a number of issues related to tokenization that you'll need to be careful about. 
+### Tokenization
 
 1. **Tokenizing the context and choices together or separately**
 
-In general, you want to tokenize the context together with the choices, as it creates a succession of tokens which is likely/natural for the model. 
+When looking at an MCQA evaluation, in general, you want to tokenize the context together with the choices, as it creates a succession of tokens which is likely/natural for the model. 
 
 However, some tokenizers (like the [Llama one](https://github.com/EleutherAI/lm-evaluation-harness/pull/531#issuecomment-1595586257)) do not satisfy `enc(context + choice) = enc(context) + enc(choice)` (and add or remove spacing). This means that comparing the logprobabilities of the choices is not easy, as the context tokens can "bleed out" into them, messing up the comparison.
 
@@ -40,6 +39,10 @@ You can also encounter some issues where your model won't stop on an end of sent
 3. **Multilinguality and tokenization**
 
 When looking at multilingual evaluations, you'll also need to see how to tokenize your text, depending on your evaluation task and metrics. As some languages do not always use spacing as a word separator (Korean, Thai, Japanese, Chinese, to cite a few), they will require language specific tokenizers to be split properly, else it will affect their scores on metrics such as [BLEU](https://github.com/EleutherAI/lm-evaluation-harness/issues/212), F1 scores, etc.
+
+4. **Code evaluations and end of sentence tokens**
+
+Code models usually have been trained with `\n\t` as a single token. This means that when generating text, they will often generate `\n\t` in one step. A task which defines `\n` as an end of sentence token (= to stop the generation) will let the model continue generating after a `\n\t`, if predicted as one token, since it's not the same as `\n`. But you would actually still want the model to stop. In these cases, you either need to update your end of sentence tokens, or define a mechanism to backtrack on the character representation of the latest tokens to stop (and cut) the generation a posteriori.
 
 ### Easy speed up for MCQA evaluations
 You can speed up your MCQA predictions by a lot if you make sure your model needs to predict only one token for the task.
