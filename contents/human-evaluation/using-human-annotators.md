@@ -24,7 +24,7 @@ Be ready to try several rounds of annotations, as your annotators will misunders
   - **Quality estimation** and **Manual curation**
 You want to control answers (notably via inter-annotator agreement if you can get it) and do a final selection to keep only the highest quality/most relevant answers.
 
-Specialized tools to build annotated high quality datasets like [Argilla](https://argilla.io/)can also help you. 
+Specialized tools to build annotated high quality datasets like [Argilla](https://argilla.io/) can also help you. 
 ### Going further
 - ⭐ [How to set up your own annotator platform in a couple minutes](https://huggingface.co/learn/cookbook/enterprise_cookbook_argilla), by Moritz Laurer. A good read to get some hands on experience using open source tools (like Argilla and Hugging Face), and understanding better the dos and don'ts of human annotation at scale.
 - ⭐ [A guide on annotation good practices](https://aclanthology.org/2024.cl-3.1.pdf). It's a review of all papers about human annotation dating from 2023, and it is very complete. Slightly dense, but very understandable.
