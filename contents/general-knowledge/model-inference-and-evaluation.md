@@ -5,7 +5,7 @@ Current large language model work in a simple way: given some text as input, the
 
 This is done in two steps.
 ### Tokenization
-The input text (called a *prompt* at inference) is first split into *tokens*, small units of texts (which can be one or several characters, up to the word level) each associated with a number. The whole range of tokens a model can parse is called its *vocabulary*. *(To understand this more in depth, go read the [Tokenization](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/General%20knowledge/Tokenization.md) page)*.
+The input text (called a *prompt* at inference) is first split into *tokens*, small units of texts (which can be one or several characters, up to the word level) each associated with a number. The whole range of tokens a model can parse is called its *vocabulary*. *(To understand this more in depth, go read the [Tokenization](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/general-knowledge/tokenization.md) page)*.
 
 ### Prediction
 
