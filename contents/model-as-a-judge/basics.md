@@ -15,7 +15,7 @@ They are used on 3 main tasks:
 - *Pairwise scoring*: comparing a pair model outputs to pick the best text with respect to a given property
 - *Computing the similarity* between a model output and a reference 
 
-*Note: In this document, I'll focus on the LLMs + prompt approach for now, but you should definitely check out how classifier judges work, as I think it can be fairly robust and well adapted to a number of use cases, and the recently introduced and promising reward model as judge approach (introduced in [this tech report](https://research.nvidia.com/publication/2024-06_nemotron-4-340b), and on which we have a small page [here](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Model%20as%20a%20judge/What%20about%20Reward%20Models.md))*
+*Note: In this document, I'll focus on the LLMs + prompt approach for now, but you should definitely check out how classifier judges work, as I think it can be fairly robust and well adapted to a number of use cases, and the recently introduced and promising reward model as judge approach (introduced in [this tech report](https://research.nvidia.com/publication/2024-06_nemotron-4-340b), and on which we have a small page [here](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/model-as-a-judge/what-about-reward-models.md))*
 
 ## Pros and cons of using judge-LLMs
 Judge LLMs have been used for the following points:
