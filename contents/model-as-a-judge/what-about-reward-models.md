@@ -53,4 +53,4 @@ On the other hand they:
 - A good place to find high performing models is the [RewardBench Leaderboard](https://huggingface.co/spaces/allenai/reward-bench).
 - You can look at how reward models have been used in the [Nemotron](https://arxiv.org/abs/2406.11704) paper. 
 - For reward models that rate single prompts and completions, you can cache the scores of many reference models and easily see how a new model performs.
-- Keeping track of win rates or probabilities, e.g. as in [this](https://arxiv.org/abs/2410.11677v1) recent paper, can allow you to detect model degradation.
+- Tracking of win rates or probabilities over training, e.g. as in [this](https://arxiv.org/abs/2410.11677v1) recent paper, can allow you to detect model degradation and select optimal checkpoints.
