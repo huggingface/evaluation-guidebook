@@ -1,7 +1,7 @@
 # Designing your automatic evaluation
 
 ## Choosing a dataset
-For your evaluation, you can either select an existing dataset (see [Some evaluation datasets](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Automated%20benchmarks/Some%20evaluation%20datasets.md) for examples) or design your own. Through this process, it's very important to keep in mind that **your evaluation result will only be as good as your evaluation dataset**.
+For your evaluation, you can either select an existing dataset (see [Some evaluation datasets](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/automated-benchmarks/some-evaluation-datasets.md) for examples) or design your own. Through this process, it's very important to keep in mind that **your evaluation result will only be as good as your evaluation dataset**.
 
 ### Selecting an existing dataset
 You must imperatively look at its components.
@@ -35,7 +35,7 @@ You can go 3 ways when designing your own dataset.
 #### Aggregating existing data
 You can aggregate existing data from different sources, evaluating a relevant capability for your task. A number of evaluation datasets are for example constructed from aggregating human evaluation datasets (such as MATH, LSAT, etc). In this case, follow the steps above.
 #### Using human annotators
-There's a whole section on using human annotators in `Human evaluation`, see [Using human annotators](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Human%20evaluation/Using%20human%20annotators.md).
+There's a whole section on using human annotators in `Human evaluation`, see [Using human annotators](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/human-evaluation/using-human-annotators.md).
 #### Using synthetic data
 - **Using LLMs**
 On this, you can check the very cool [Cosmopedia](https://huggingface.co/blog/cosmopedia) blog by cool HF colleagues! It's mostly studying how to create a synthetic training dataset, but similar techniques can be used for evaluation. 
@@ -79,7 +79,7 @@ A prompt for a general MCQA or QA is usually made of some of the following:
 - connector words (`Question`, `Context`, `Choice`, ...)
 
 When defining your prompt, you need to be aware that:
-- even small changes in semantically equivalent prompts can make the results vary by quite a lot (see Section `Different prompt` in [Troubleshooting reproducibility](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/Troubleshooting/Troubleshooting%20reproducibility.md)), and prompt formats might advantage or disadvantage specific models
+- even small changes in semantically equivalent prompts can make the results vary by quite a lot (see Section `Different prompt` in [Troubleshooting reproducibility](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/troubleshooting/troubleshooting-reproducibility.md)), and prompt formats might advantage or disadvantage specific models
 	- How to mitigate this: 
 		- A costly way is to re-run the evaluation several times with prompt variations
 		- A less costly way is to run your evaluation once using a range of prompt formats allocated to different samples of equivalent difficulty
@@ -88,7 +88,7 @@ When defining your prompt, you need to be aware that:
 	- [This paper](https://arxiv.org/abs/2407.07890) is great on the topic, showing notably how some models can be over-evaluated because they have overfitted the test set **format**
 	- On the Open LLM Leaderboard 2, we've notably observed that Llama 3.2 and Qwen 2.5 are no longer following the format of the prompt provided in a few-shot setup for this reason.
 - for a number of metrics, you want a very constrained generation or output. 
-  *You can learn more about this in the `Constraining model outputs` section of the [Model inference and evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/General%20knowledge/Model%20inference%20and%20evaluation.md) page.*
+  *You can learn more about this in the `Constraining model outputs` section of the [Model inference and evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/general-knowledge/model-inference-and-evaluation.md) page.*
 
 ## Choosing a metric
 If you are looking at **log-probabilities**, your metrics are going to be easy: you'll want to look at accuracy (how often the most likely choice is the best choice). It's important to normalize it by length (either character, token, or pmi). You could also look at perplexity, recall, or f1 score.
