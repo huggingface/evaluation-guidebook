@@ -41,8 +41,8 @@ Instead, we can use
 Reward models are typically:
 - **Very fast**: Getting a score is as simple as running a forward pass of a relatively small model once (since we only get a score, and not long text, contrary to judge-LLMs)
 - **Deterministic**: The same scores will be reproduced through the same forward pass
-- **Unlikely to suffer from positional bias**, since the training data will contain both first and second answers as being the best
-- **Require no prompt engineering**, since the model will simply output a score from two completions depending on preference data it's been trained on.
+- **Unlikely to suffer from positional bias**: As most models take only one completion, they can not be influenced by the order. For pairwise models, positional bias is often also minimal, as long as the training data was balanced with respect to containing both first and second answers as being the best.
+- **Require no prompt engineering**: since the model will simply output a score from one or two completions depending on preference data it's been trained on.
 
 On the other hand they:
 - **Require specific fine-tuning**: This can be a relatively costly step, and elthough they inherit many capabilities from a base model, they may still perform poorly on tasks that are out of the training distribution.
@@ -53,4 +53,4 @@ On the other hand they:
 - A good place to find high performing models is the [RewardBench Leaderboard](https://huggingface.co/spaces/allenai/reward-bench).
 - You can look at how reward models have been used in the [Nemotron](https://arxiv.org/abs/2406.11704) paper. 
 - For reward models that rate single prompts and completions, you can cache the scores of many reference models and easily see how a new model performs.
-
+- Keeping track of win rates or probabilities, e.g. as in [this](https://arxiv.org/abs/2410.11677v1) recent paper, can allow you to detect model degradation.
