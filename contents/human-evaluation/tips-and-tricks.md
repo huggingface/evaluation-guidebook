@@ -1,4 +1,5 @@
 # Tips and tricks
+Here are a few practical tips you might want consider when using human annotators to build an evaluation dataset. If you haven't done so yet, we recommend reading first the page on "Using human annotators" and then come back to this page.
 
 ## Designing the task
 
