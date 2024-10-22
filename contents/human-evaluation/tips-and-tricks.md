@@ -14,7 +14,7 @@
 
 - **Annotators should work independently**: It's better if annotators don't help each other or see each other's work during the task, as they can propagate their own biases and cause annotation drift. Alignment should always happen through comprehensive guidelines. You may want to train any new team members first on a separate dataset and/or use inter-annotator agreement metrics to make sure the team is aligned.
 
-- **Consistency is key**: If you make important changes to your guidelines (e.g., changed a definition or instruction, or have added/removed labels), consider if you need to iterate over the annotated data.
+- **Consistency is key**: If you make important changes to your guidelines (e.g., changed a definition or instruction, or have added/removed labels), consider if you need to iterate over the annotated data. At least, you should track the changes in your dataset through a metadata value like `guidelines-v1`.
 
 ## Hybrid human-machine annotation
 
