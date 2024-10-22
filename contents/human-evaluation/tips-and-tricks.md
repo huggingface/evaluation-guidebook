@@ -2,13 +2,13 @@
 
 ## Designing the task
 
-- **Simple is better**: Annotation tasks can get unnecessarily complex pretty easily, so try to keep it as simple as possible. Keeping the cognitive load of the annotators to a minimum will help you ensure that they stay focused and make annotations of a higher quality.
+- **Simple is better**: Annotation tasks can get unnecessarily complex, so keep it as simple as possible. Keeping the cognitive load of the annotators to a minimum will help you ensure that they stay focused and make annotations of a higher quality.
 
 - **Check what to show**: Only show the necessary information for annotators to complete the task and make sure you don't include anything that could introduce extra bias.
 
-- **Details are important**: Where and how things are displayed can introduce extra work or cognitive load and therefore impact negatively in the quality of the result. For example, make sure that the texts and the task are visible together and avoid uncesary scrolling. If you combine tasks and the result of one informs the other, you can display them sequentially. Think about how everything is displayed in your annotation tool and see if there's any way you can simplify even more.
+- **Consider your annotators time**: Where and how things are displayed can introduce extra work or cognitive load and therefore negatively impact in the quality of results. For example, make sure that the texts and the task are visible together and avoid unnecessary scrolling. If you combine tasks and the result of one informs the other, you can display them sequentially. Think about how everything is displayed in your annotation tool and see if there's any way you can simplify even more.
 
-- **Test the setup**: Once you have your task designed and some guidelines in place, make sure you test it yourself before involving the whole team, and iterate as needed.
+- **Test the setup**: Once you have your task designed and some guidelines in place, make sure you test it yourself on a few samples before involving the whole team, and iterate as needed. 
 
 ## During the annotation
 
@@ -20,7 +20,7 @@
 
 Sometimes teams face contraints on time and resources but don't want to sacrifice on the pros of human evaluation. In these cases, you may use the help of models to make the task more efficient.
 
-- **Model-aided annotation**: You may use the predictions or generations of a model as pre-annotations, so that the annotation team doesn't need to start from scratch. Just note that this could introduce biases and that if the results of the model aren't good enough it may add more work and noise instead of helping.
+- **Model-aided annotation**: You may use the predictions or generations of a model as pre-annotations, so that the annotation team doesn't need to start from scratch. Just note that this could introduce the model's biases into human annotations, and that if the model's accuracy is poor it may increase work for annotators.
 
 - **Supervise model as a judge**: You can combine the power of the model as a judge methodology (see the section on "Model as a judge") and human supervisors who validate or discard the results. Note that the biases discussed in the "Pros and cons of human evaluation" will apply here.
 
