@@ -4,7 +4,7 @@
 
 - **Simple is better**: Annotation tasks can get unnecessarily complex, so keep it as simple as possible. Keeping the cognitive load of the annotators to a minimum will help you ensure that they stay focused and make annotations of a higher quality.
 
-- **Check what to show**: Only show the necessary information for annotators to complete the task and make sure you don't include anything that could introduce extra bias.
+- **Check what you show**: Only show the necessary information for annotators to complete the task and make sure you don't include anything that could introduce extra bias.
 
 - **Consider your annotators time**: Where and how things are displayed can introduce extra work or cognitive load and therefore negatively impact in the quality of results. For example, make sure that the texts and the task are visible together and avoid unnecessary scrolling. If you combine tasks and the result of one informs the other, you can display them sequentially. Think about how everything is displayed in your annotation tool and see if there's any way you can simplify even more.
 
@@ -14,7 +14,7 @@
 
 - **Annotators should work independently**: It's better if annotators don't help each other or see each other's work during the task, as they can propagate their own biases and cause annotation drift. Alignment should always happen through comprehensive guidelines. You may want to train any new team members first on a separate dataset and/or use inter-annotator agreement metrics to make sure the team is aligned.
 
-- **Consistency is key**: If you make important changes to your guidelines (e.g., changed a definition or instruction, or have added/removed labels), consider if you need to iterate over the annotated data.
+- **Consistency is key**: If you make important changes to your guidelines (e.g., changed a definition or instruction, or have added/removed labels), consider if you need to iterate over the annotated data. 
 
 ## Hybrid human-machine annotation
 
