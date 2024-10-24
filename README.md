@@ -50,7 +50,6 @@ If you're an advanced user, I suggest skimming to the `Going further` sections.
 ### Examples
 You'll also find examples as jupyter notebooks, to get a more hands on experience of evaluation if that's how you learn!
 - [Comparing task formulations during evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/examples/comparing_task_formulations.ipynb): This notebook walks you through how to define prompt variations for a single task, run the evaluations, and analyse the results.  
-- [Build a custom evaluation task with synthetic data and manual evaluation](https://github.com/argilla-io/argilla-cookbook/tree/main/domain-eval): This tutorial project guides you through building a custom evaluation task for your domain. It uses with synthetic data and manual evaluation with [Argilla](https://github.com/argilla-io/argilla/) and [distilabel](https://github.com/argilla-io/distilabel).
 
 ## Planned next articles
 - contents/automated-benchmarks/Metrics -> Description of automatic metrics
@@ -62,6 +61,7 @@ You'll also find examples as jupyter notebooks, to get a more hands on experienc
 Links I like
 - [About evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About-evaluation.md)
 - [About NLP](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About-NLP.md)
+- [End-to-end custom evaluation tutorial](https://github.com/argilla-io/argilla-cookbook/tree/main/domain-eval): This tutorial guides you through building a custom evaluation task for your domain. It uses with synthetic data and manual evaluation with [Argilla](https://github.com/argilla-io/argilla/) and [distilabel](https://github.com/argilla-io/distilabel).
 
 ## Thanks
 This guide has been heavily inspired by the [ML Engineering Guidebook](https://github.com/stas00/ml-engineering) by Stas Bekman! Thanks for this cool resource!
