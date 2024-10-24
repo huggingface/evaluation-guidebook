@@ -61,7 +61,6 @@ You'll also find examples as jupyter notebooks, to get a more hands on experienc
 Links I like
 - [About evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About-evaluation.md)
 - [About NLP](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About-NLP.md)
-- [End-to-end custom evaluation tutorial](https://github.com/argilla-io/argilla-cookbook/tree/main/domain-eval): This tutorial guides you through building a custom evaluation task for your domain. It uses with synthetic data and manual evaluation with [Argilla](https://github.com/argilla-io/argilla/) and [distilabel](https://github.com/argilla-io/distilabel).
 
 ## Thanks
 This guide has been heavily inspired by the [ML Engineering Guidebook](https://github.com/stas00/ml-engineering) by Stas Bekman! Thanks for this cool resource!
