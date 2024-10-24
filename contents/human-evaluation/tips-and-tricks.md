@@ -26,3 +26,7 @@ Sometimes teams face contraints on time and resources but don't want to sacrific
 - **Supervise model as a judge**: You can combine the power of the model as a judge methodology (see the section on "Model as a judge") and human supervisors who validate or discard the results. Note that the biases discussed in the "Pros and cons of human evaluation" will apply here.
 
 - **Idenfity edge cases**: For an even faster task, use a jury of models and then have your human supervisor(s) step in where models disagree or there's a tie to break. Again, be aware of the biases discussed in the "Pros and cons of human evaluation".
+
+## End to end tutorial
+
+To build you own custom evaluation setup following these tips, you can follow this [practical tutorial](https://github.com/argilla-io/argilla-cookbook/tree/main/domain-eval) from Argilla. It guides you through building a custom evaluation task for your domain, using synthetic data and manual evaluation with [Argilla](https://github.com/argilla-io/argilla/) and [distilabel](https://github.com/argilla-io/distilabel). The guide starts from domain documents and results in a custom evaluation task that you can use to evaluate your model with [lighteval](https://github.com/huggingface/lighteval).
