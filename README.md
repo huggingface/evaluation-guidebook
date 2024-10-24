@@ -47,6 +47,10 @@ If you're an advanced user, I suggest skimming to the `Going further` sections.
 - [Model inference and evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/general-knowledge/model-inference-and-evaluation.md)
 - [Tokenization](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/general-knowledge/tokenization.md)
 
+### Examples
+You'll also find examples as jupyter notebooks, to get a more hands on experience of evaluation if that's how you learn!
+- [Comparing several task formulations during evaluation]() 
+
 ## Planned next articles
 - contents/automated-benchmarks/Metrics -> Description of automatic metrics
 - contents/Introduction: Why do we need to do evaluation?
