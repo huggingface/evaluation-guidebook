@@ -35,7 +35,7 @@ couldn't parse one of -\frac{1}{{}2x} or -\frac{1}{{}2x}, I don't understand thi
 
 ### How do I get around this?
 
-You could either re-write the [$\LaTeX$ grammar](https://github.com/sympy/sympy/blob/master/sympy/parsing/latex/lark/grammar/latex.lark), adding needed features to
+You could either re-write the $\LaTeX$ [grammar](https://github.com/sympy/sympy/blob/master/sympy/parsing/latex/lark/grammar/latex.lark), adding needed features to
 the code, or add manual checks to your code to improve model scores. After
 almost falling into a deep rabbit hole, we decided that adding string
 comparison checks to our code would be sufficient.
