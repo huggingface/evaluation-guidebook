@@ -16,9 +16,9 @@
 		- computing the log-probabilities of all possible choices to get a normalized answer
 - **Verbosity-bias** (or length-bias): they tend to like more verbose answers
 	- You can mitigate this by [accounting for the answer difference in length](https://arxiv.org/abs/2404.04475)
-- **Debatable consistency [with human answers](https://arxiv.org/pdf/2308.15812):**
+- **Debatable consistency [with human answers](https://arxiv.org/abs/2308.15812):**
 	- However, it's also [debatable if non-expert humans are a good baseline for absolutely all evaluations](https://arxiv.org/abs/2202.06935). For some specific domains (medical, legal, mathematics, etc), relying on non-expert human annotators is as bad a baseline as using an LLM directly.
-- **Format bias**: they tend to fail to evaluate accurately if the prompt format [is too far away](https://arxiv.org/pdf/2310.17631) from what it's been trained with. For example, a model trained to do pairwise comparison with an added reference answer will fail if said answer is not provided, and failures will also occur the other way around.
+- **Format bias**: they tend to fail to evaluate accurately if the prompt format [is too far away](https://arxiv.org/abs/2310.17631) from what it's been trained with. For example, a model trained to do pairwise comparison with an added reference answer will fail if said answer is not provided, and failures will also occur the other way around.
 	- You can mitigate this by paying attention to the training prompt format (if the model was instruction tuned) and ensuring you follow it.
 
 ## Picking correct tasks for an LLM judge

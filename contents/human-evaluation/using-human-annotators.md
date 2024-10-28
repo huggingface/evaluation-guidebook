@@ -1,6 +1,6 @@
 # Using human annotators
 
-I suggest reading Section 3 of this [review](https://aclanthology.org/2024.cl-3.1.pdf) of good practices in data annotation quality. If you want production level quality and have the means to implement all of these methods, go ahead! 
+I suggest reading Section 3 of this [review](https://aclanthology.org/2024.cl-3.1/) of good practices in data annotation quality. If you want production level quality and have the means to implement all of these methods, go ahead! 
 
   ![Best_annotation_practices](https://github.com/huggingface/evaluation-guidebook/blob/main/assets/best_annotation_practices.png?raw=true)
 
@@ -27,6 +27,6 @@ You want to control answers (notably via inter-annotator agreement if you can ge
 Specialized tools to build annotated high quality datasets like [Argilla](https://argilla.io/) can also help you. 
 ### Going further
 - ⭐ [How to set up your own annotator platform in a couple minutes](https://huggingface.co/learn/cookbook/enterprise_cookbook_argilla), by Moritz Laurer. A good read to get some hands on experience using open source tools (like Argilla and Hugging Face), and understanding better the dos and don'ts of human annotation at scale.
-- ⭐ [A guide on annotation good practices](https://aclanthology.org/2024.cl-3.1.pdf). It's a review of all papers about human annotation dating from 2023, and it is very complete. Slightly dense, but very understandable.
+- ⭐ [A guide on annotation good practices](https://aclanthology.org/2024.cl-3.1/). It's a review of all papers about human annotation dating from 2023, and it is very complete. Slightly dense, but very understandable.
 - [Another guide on annotation good practices](https://scale.com/guides/data-labeling-annotation-guide), by ScaleAI, specialised in human evaluations. Its a more lightweigth complement to the above document.
-- [Assumptions and Challenges of Capturing Human Labels](https://aclanthology.org/2024.naacl-long.126.pdf) is a paper on how to look at source of annotator disagreement and mitigate them in practice
+- [Assumptions and Challenges of Capturing Human Labels](https://aclanthology.org/2024.naacl-long.126/) is a paper on how to look at source of annotator disagreement and mitigate them in practice

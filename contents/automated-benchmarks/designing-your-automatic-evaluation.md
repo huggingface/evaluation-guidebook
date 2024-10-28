@@ -43,7 +43,7 @@ Make sure to manually check/filter/inspect your dataset afterwards (following th
 
 - **Using rule-based techniques**
 If your task allows, this is a very good way to get a virtually infinite supply of samples and avoid contamination! 
-For some examples, you can look at [NPHardEval](https://arxiv.org/abs/2312.14890), [DyVal](https://arxiv.org/abs/2309.17167), [MuSR](https://arxiv.org/abs/2310.16049), [BabiQA](https://arxiv.org/pdf/1502.05698), etc.
+For some examples, you can look at [NPHardEval](https://arxiv.org/abs/2312.14890), [DyVal](https://arxiv.org/abs/2309.17167), [MuSR](https://arxiv.org/abs/2310.16049), [BabiQA](https://arxiv.org/abs/1502.05698), etc.
 
 ## Choosing an inference method
 You'll need to choose what kind of inference method you need.
