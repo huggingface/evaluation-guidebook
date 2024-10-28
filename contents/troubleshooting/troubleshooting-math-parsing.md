@@ -7,7 +7,7 @@ Turns out, there is no right way to parse $\LaTeX$:
 
 
 ![](https://github.com/huggingface/evaluation-guidebook/blob/main/assets/sympy_doc.png?raw=true)
-*From the [`sympy`](https://github.com/sympy/sympy)) documentation:*
+*From the [`sympy`](https://github.com/sympy/sympy) documentation:*
 
 The lm-evaluation harness uses [`sympy`](https://github.com/sympy/sympy) (a Python library for symbolic mathematics) to parse latex and compare expressions.  
 When using `sympy` to try and parse the ground truths (using the ground truth against itself), we only get around 0.94 accuracy.
