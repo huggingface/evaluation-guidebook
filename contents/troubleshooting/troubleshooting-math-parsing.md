@@ -6,8 +6,8 @@ This benchmark uses $\LaTeX$ to represent mathematical calculations and symbols.
 Turns out, there is no right way to parse $\LaTeX$:
 
 
-![](https://github.com/huggingface/evaluation-guidebook/blob/main/assets/sympy_doc.png?raw=true)
-*From the [`sympy`](https://github.com/sympy/sympy) documentation:*
+![](../../assets/sympy_doc.png)  
+*From the [`sympy`](https://github.com/sympy/sympy) documentation*
 
 The lm-evaluation harness uses [`sympy`](https://github.com/sympy/sympy) (a Python library for symbolic mathematics) to parse latex and compare expressions.  
 When using `sympy` to try and parse the ground truths (using the ground truth against itself), we only get around 0.94 accuracy.
@@ -40,8 +40,10 @@ the code, or add manual checks to your code to improve model scores. After
 almost falling into a deep rabbit hole, we decided that adding string
 comparison checks to our code would be sufficient.
 
-[Fix to the Lm Eval Harness](https://github.com/huggingface/evaluation-guidebook/blob/main/assets/lm_eval_doc.png?raw=true)
+![Fix to the Lm Eval Harness](../../assets/lm_eval_diff.png)  
+*Fix to the LM Evaluation Harness*
 
+### Results
 
 Here is a table comparing old and new results of the first 25 models.
 
