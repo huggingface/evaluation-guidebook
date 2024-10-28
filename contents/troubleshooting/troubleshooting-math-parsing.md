@@ -1,4 +1,4 @@
-# Stop using LaTeX to evaluate MATH capabilities
+# Using LaTeX to evaluate MATH capabilities
 
 Parsing latex is hard. This is an issue when evaluating a model expecting $\LaTeX$ as output. This is the case for the [MATH benchmark](https://huggingface.co/datasets/lighteval/MATH).
 
