@@ -34,3 +34,6 @@ Cool summaries and experience feedbacks:
 - [All our blogs about evaluations and leaderboards](https://huggingface.co/blog?tag=leaderboard)
 - [Leaderboard finder](https://huggingface.co/spaces/leaderboards/LeaderboardFinder): Find the most relevant leaderboard for your use case
 
+### Tutorials
+- [End-to-end custom domain evaluation tutorial](https://github.com/argilla-io/argilla-cookbook/tree/main/domain-eval): This tutorial guides you through building a custom evaluation task for your domain. It uses with synthetic data and manual evaluation with [Argilla](https://github.com/argilla-io/argilla/) and [distilabel](https://github.com/argilla-io/distilabel).
+
