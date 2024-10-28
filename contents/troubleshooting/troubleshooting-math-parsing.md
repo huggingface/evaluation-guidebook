@@ -40,7 +40,7 @@ You could either re-write the $\LaTeX$ grammar or add manual checks to your code
 [Fix to the Lm Eval Harness](https://github.com/huggingface/evaluation-guidebook/blob/main/assets/lm_eval_doc.png?raw=true)
 
 
-Here is a table comparing old and new results.
+Here is a table comparing old and new results of the first 25 models.
 
 <div id="xdihwljbql" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
