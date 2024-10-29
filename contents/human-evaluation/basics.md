@@ -15,7 +15,7 @@ Lastly, if **you already have a dataset and scores**, you can ask humans to revi
 
 Notes: 
 - *For evaluation of already deployed production models, you can also ask users for feedback, and do A/B testing then.*
-- *[AI audits](https://arxiv.org/pdf/2401.14462) (external systematic evaluation of models) are usually human based, but out of scope for this document.
+- *[AI audits](https://arxiv.org/abs/2401.14462) (external systematic evaluation of models) are usually human based, but out of scope for this document.
 
 ### Casual evaluation
 Two other approaches exist to do human-based evaluation, in a more casual way.
@@ -33,9 +33,9 @@ Human evaluation is very interesting for the following reasons:
   *Note: However, when doing evaluation with humans, you need to make sure your annotators are diverse enough that your results generalizes.*
 
 However, it also present a number of limitations:
-- **First impressions bias**: Human evaluators tend to estimate the quality of answers [based on first impressions](https://arxiv.org/pdf/2309.16349), instead of actual factuality or faithfulness. 
+- **First impressions bias**: Human evaluators tend to estimate the quality of answers [based on first impressions](https://arxiv.org/abs/2309.16349), instead of actual factuality or faithfulness. 
 - **Tone bias**: Crowdsourced annotators are notably very sensitive to tone, and underestimate the number of factual or logical errors in an assertive answer. In other terms, if a model says wrong things in a confident tone, human evaluators are much less likely to notice it, which could skew ratings towards the more assertive models. (Expert annotators are less likely to fall prey to these biases.) 
-- **Self-preference bias**: Humans are [most likely to prefer answers which appeal to their views or align with their opinions or errors](https://arxiv.org/pdf/2310.13548), rather than answers which are factually correct.
+- **Self-preference bias**: Humans are [most likely to prefer answers which appeal to their views or align with their opinions or errors](https://arxiv.org/abs/2310.13548), rather than answers which are factually correct.
 - **Identity bias**: People with different identities tend to have different values, and rate model answers very differently (for example on [toxicity](https://arxiv.org/abs/2205.00501))
 ### Systematic human evaluation
 Pros of systematic human evaluations, especially with paid annotators, are
