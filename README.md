@@ -59,8 +59,8 @@ You'll also find examples as jupyter notebooks, to get a more hands on experienc
 
 ## Resources
 Links I like
-- [About evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About-evaluation.md)
-- [About NLP](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About-NLP.md)
+- [About evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About%20evaluation.md)
+- [About NLP](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About%20NLP.md)
 
 ## Thanks
 This guide has been heavily inspired by the [ML Engineering Guidebook](https://github.com/stas00/ml-engineering) by Stas Bekman! Thanks for this cool resource!
