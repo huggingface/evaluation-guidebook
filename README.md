@@ -49,7 +49,7 @@ If you're an advanced user, I suggest skimming to the `Going further` sections.
 
 ### Examples
 You'll also find examples as jupyter notebooks, to get a more hands on experience of evaluation if that's how you learn!
-- [Comparing task formulations during evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/examples/comparing_task_formulations.ipynb): This notebook walks you through how to define prompt variations for a single task, run the evaluations, and analyse the results.  
+- [Comparing task formulations during evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/examples/comparing_task_formulations.ipynb): This notebook walks you through how to define prompt variations for a single task, run the evaluations, and analyse the results.  
 
 ## Planned next articles
 - contents/automated-benchmarks/Metrics -> Description of automatic metrics
