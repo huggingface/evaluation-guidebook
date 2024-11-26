@@ -1,6 +1,6 @@
 # Getting a Judge-LLM
 
-When using an existing LLM, you can go for [generalist, high capability models](https://arxiv.org/abs/2306.05685v4),  using [small specialist models](https://arxiv.org/pdf/2405.01535) trained specifically to discriminate from preference data, or training your own.
+When using an existing LLM, you can go for [generalist, high capability models](https://arxiv.org/abs/2306.05685v4),  using [small specialist models](https://arxiv.org/abs/2405.01535) trained specifically to discriminate from preference data, or training your own.
 
 ## Using a generalist LLM
 
@@ -22,7 +22,7 @@ You can also make the choice to use tiny specialized LLM judges. With often a co
 Some existing models:
 - Flow-Judge-v0.1 ([weights](https://huggingface.co/collections/flowaicom/flow-judge-v01-66e6af5fc3b3a128bde07dec)), 3.8B parameters, a Phi-3.5-mini-instruct fine-tuned on a synthetic preference dataset
 - Prometheus ([weights](https://huggingface.co/prometheus-eval/prometheus-13b-v1.0), [paper](https://arxiv.org/abs/2310.08491)), 13B parameters, a model trained from scratch on synthetic preference dataset. A 7B parameter [v2](https://huggingface.co/prometheus-eval/prometheus-7b-v2.0) also exists, a Mistral-7B-Instruct-v0.2 fine-tune on a bigger synthetic preference dataset, with added weight merging
-- JudgeLM ([paper](https://arxiv.org/pdf/2310.17631)), 7B to 33B parameters, models trained from scratch on synthetic preference datasets generated with a variety of models.
+- JudgeLM ([paper](https://arxiv.org/abs/2310.17631)), 7B to 33B parameters, models trained from scratch on synthetic preference datasets generated with a variety of models.
 
 ## Training your own
 You can also make the choice to train or fine-tune your own LLM-as-judge.

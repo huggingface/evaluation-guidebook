@@ -49,7 +49,7 @@ If you're an advanced user, I suggest skimming to the `Going further` sections.
 
 ### Examples
 You'll also find examples as jupyter notebooks, to get a more hands on experience of evaluation if that's how you learn!
-- [Comparing task formulations during evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/examples/comparing_task_formulations.ipynb): This notebook walks you through how to define prompt variations for a single task, run the evaluations, and analyse the results.  
+- [Comparing task formulations during evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/examples/comparing_task_formulations.ipynb): This notebook walks you through how to define prompt variations for a single task, run the evaluations, and analyse the results.  
 
 ## Planned next articles
 - contents/automated-benchmarks/Metrics -> Description of automatic metrics
@@ -59,8 +59,8 @@ You'll also find examples as jupyter notebooks, to get a more hands on experienc
 
 ## Resources
 Links I like
-- [About evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About-evaluation.md)
-- [About NLP](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About-NLP.md)
+- [About evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About%20evaluation.md)
+- [About NLP](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About%20NLP.md)
 
 ## Thanks
 This guide has been heavily inspired by the [ML Engineering Guidebook](https://github.com/stas00/ml-engineering) by Stas Bekman! Thanks for this cool resource!
