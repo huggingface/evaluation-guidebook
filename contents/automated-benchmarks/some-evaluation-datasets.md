@@ -65,7 +65,7 @@ However, careful:
 ## Pre-LLM datasets
 
 | Evaluation name | Task type | Task data | Task content | Source | Dataset | Comments |
-|--- |--- |--- |--- |--- |--- |--- |- |-- |
+|--- |--- |--- |--- |--- |--- |--- |
 | DeepFix | Code task, Code-to-code, Correction | 7K student-written erroneous C programs | Correct the C programs | [Paper](https://ojs.aaai.org/index.php/AAAI/article/view/10742) | | |
 | MLSum | Generation, Multilingual, Summarization | 1.5M news summary/article pairs from the DailyMail, Le Monde, Süddeutsche Zeitung, El Pais, Moskovskij Komsomolets and Internet Haber (en, fr, de, es, ru, tur) | Summarize the articles | [Paper](https://arxiv.org/abs/2004.14900) | [Hugging Face](https://huggingface.co/datasets/mlsum) | Palm: Prefixed with a prompt, truncated article to 2048 tokens |
 | TransCoder | Code task, Code-to-code | 852 parallel functions in Python/Java/C++ | Translate from a language to another | [Paper](https://arxiv.org/pdf/2006.03511.pdf) | [From paper](https://github.com/facebookresearch/CodeGen/blob/main/docs/transcoder.md) | |
