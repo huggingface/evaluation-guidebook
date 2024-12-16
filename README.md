@@ -26,6 +26,7 @@ If you want an intro on the topic, you can read this [blog](https://huggingface.
 ### Human evaluation
 - [Basics](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/human-evaluation/basics.md)
 - [Using human annotators](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/human-evaluation/using-human-annotators.md)
+- [Using arena-like data](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/human-evaluation/using-arena-data.md)
 - [Tips and tricks](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/human-evaluation/tips-and-tricks.md)
 
 ### LLM-as-a-judge
