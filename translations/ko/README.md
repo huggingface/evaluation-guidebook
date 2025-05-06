@@ -26,32 +26,32 @@
 
 ### 자동 벤치마크
 
-- [기본](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/automated-benchmarks/basics.md)
-- [자동 평가 설계하기](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/automated-benchmarks/designing-your-automatic-evaluation.md)
-- [일부 평가 데이터셋](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/automated-benchmarks/some-evaluation-datasets.md)
-- [팁과 요령](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/automated-benchmarks/tips-and-tricks.md)
+- [기본](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/automated-benchmarks/basics.md)
+- [자동 평가 설계하기](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/automated-benchmarks/designing-your-automatic-evaluation.md)
+- [일부 평가 데이터셋](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/automated-benchmarks/some-evaluation-datasets.md)
+- [팁과 요령](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/automated-benchmarks/tips-and-tricks.md)
 
 ### 인간 평가
 
-- [기본](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/human-evaluation/basics.md)
-- [인간 평가자 활용하기](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/human-evaluation/using-human-annotators.md)
-- [팁과 요령](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/human-evaluation/tips-and-tricks.md)
+- [기본](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/human-evaluation/basics.md)
+- [인간 평가자 활용하기](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/human-evaluation/using-human-annotators.md)
+- [팁과 요령](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/human-evaluation/tips-and-tricks.md)
 
 ### LLM-심사관
 
-- [기본](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/model-as-a-judge/basics.md)
-- [심사관-LLM 얻기](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/model-as-a-judge/getting-a-judge-llm.md)
-- [평가 프롬프트 설계하기](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/model-as-a-judge/designing-your-evaluation-prompt.md)
-- [평가자 평가하기](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/model-as-a-judge/evaluating-your-evaluator.md)
-- [보상 모델은 어떨까](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/model-as-a-judge/what-about-reward-models.md)
-- [팁과 요령](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/model-as-a-judge/tips-and-tricks.md)
+- [기본](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/model-as-a-judge/basics.md)
+- [심사관-LLM 얻기](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/model-as-a-judge/getting-a-judge-llm.md)
+- [평가 프롬프트 설계하기](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/model-as-a-judge/designing-your-evaluation-prompt.md)
+- [평가자 평가하기](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/model-as-a-judge/evaluating-your-evaluator.md)
+- [보상 모델은 어떨까](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/model-as-a-judge/what-about-reward-models.md)
+- [팁과 요령](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/model-as-a-judge/tips-and-tricks.md)
 
 ### 문제 해결
 
 이 가이드에서 가장 실용적인 부분입니다.
 
-- [추론 문제 해결](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/troubleshooting/troubleshooting-inference.md)
-- [재현성 문제 해결](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/troubleshooting/troubleshooting-reproducibility.md)
+- [추론 문제 해결](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/troubleshooting/troubleshooting-inference.md)
+- [재현성 문제 해결](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/troubleshooting/troubleshooting-reproducibility.md)
 
 ### 일반 지식
 
@@ -59,14 +59,14 @@
 
 고급 사용자라면 `더 나아가기` 섹션을 훑어보는 것을 추천합니다.
 
-- [모델 추론 및 평가](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/general-knowledge/model-inference-and-evaluation.md)
-- [토큰화](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/general-knowledge/tokenization.md)
+- [모델 추론 및 평가](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/general-knowledge/model-inference-and-evaluation.md)
+- [토큰화](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/general-knowledge/tokenization.md)
 
 ### 예제
 
 더 실습적인 평가 경험을 원하신다면 주피터 노트북 형태의 예제도 찾을 수 있습니다!
 
-- [평가 중 작업 공식 비교하기](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/examples/comparing_task_formulations.ipynb): 이 노트북은 단일 작업에 대한 프롬프트 변형을 정의하고, 평가를 실행하고, 결과를 분석하는 방법을 안내합니다.
+- [평가 중 작업 공식 비교하기](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/contents/examples/comparing_task_formulations.ipynb): 이 노트북은 단일 작업에 대한 프롬프트 변형을 정의하고, 평가를 실행하고, 결과를 분석하는 방법을 안내합니다.
 
 ## 계획된 다음 글
 
@@ -79,8 +79,8 @@
 
 참조 링크
 
-- [평가에 대하여](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About%20evaluation.md)
-- [NLP에 대하여](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About%20NLP.md)
+- [평가에 대하여](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/resources/About%20evaluation.md)
+- [NLP에 대하여](https://github.com/huggingface/evaluation-guidebook/blob/main/translations/ko/resources/About%20NLP.md)
 
 ## 한국어 번역 관련
 
