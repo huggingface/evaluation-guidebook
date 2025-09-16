@@ -1,0 +1,154 @@
+# Evals in 2025: going beyond simple benchmarks to build models people can actually use
+
+I believe we should be targeting building models that "work well" rather than models that are "intelligent" - it's a better measure of success to build models that are useful and efficient tools for people than to target "general intelligence" to solve our problems in our stead while creating a whole range of other issues on the path.
+
+From the recent reports by [Anthropic](https://www.anthropic.com/research/anthropic-economic-index-september-2025-report) and [OpenAI](https://cdn.openai.com/pdf/a253471f-8260-40c6-a2cc-aa93fe9f142e/economic-research-chatgpt-usage-paper.pdf), the current most frequent use cases of LLMs seem to indeed be assistants: for coding, administrative support, etc - and models have made strides this year on general agentic use cases.
+
+So what should you test if you want to build a model which is a good assistant? 
+
+A good assistant should be able to do the following: given a query, it should manage ambiguity in instructions, construct a step by step plan, correctly identify necessary resources, apply said plan without getting side tracked, calling tools as needed, adapt to unexpected events when applying their plan or new information they find, all the while without bullshitting. This behavior requires a combination of capabilities, such as step by step "reasoning", long context memory management, adaptability, low hallucination rates, with math, code and tool calling abilities on top. Models as little as 7B can be good agent assistants (though we've observed that going lower in size hits a barrier below 3B).
+
+How do we evaluate if agents are good at all these tasks? This requires a multi-layered approach: testing individual capabilities during development, measuring integrated performance on realistic tasks, and probing adaptability in dynamic environments. 
+
+## Testing specific capabilities
+
+You can evaluate **specific capabilities** on their own - it's usually quite interesting to get signal when training, or when comparing base/pretrained models. (However, if you select and validate your training methods with the following evaluations, reporting on them on the final model is slightly biased as you have already oriented your training method towards good results on them).
+
+### Knowledge
+The main evaluation dataset for knowledge has been [MMLU](https://arxiv.org/abs/2009.03300) (2020). It reached saturation/contamination, and after more in depth examination, a number of issues were identified: incomplete questions referring absent documents, incorrect ground truths, ambiguous questions, and blatant americano-centrism in the topics chosen. It was therefore cleaned in [MMLU-Redux](https://arxiv.org/abs/2406.04127) (2024), extended with more complex questions and more answers in [**MMLU-Pro**](https://arxiv.org/abs/2406.01574) (2024, the main replacement used by the community at the moment), and translated/annotated for cultural bias in [Global-MMLU](https://arxiv.org/abs/2412.03304) (2024).
+
+Another high quality knowledge dataset was [**GPQA**](https://arxiv.org/abs/2311.12022) (2023), custom PhD level questions in biology/chemistry/physics, made to be answerable by PhD students in the correct domain and not otherwise. The most used subset is the `diamond` one, but since its publication in 2023 it has also started reaching contamination.
+
+Last but not least, the pompously named but very high quality [**Humanity's Last Exam**](https://agi.safe.ai/) (2024) contains 2.5K crowdsourced questions by experts in their field, across domains. It is mostly private, and questions require both complex knowledge and reasoning. It has not been broken yet, and it's imo a cool dataset. The only issue is that since there is no way to get a model scored fast, people now evaluate against it by using an LLM judge to assess their answers, insted of checking against ground truth, so it's one of these evaluations where you'll get really uncomparable results in the wild.
+
+However, though testing models for the raw quality of their latent knowledge made a lot of sense a couple years back (and is still interesting while training to test model quality, with evals like MMLU-Pro during pretraining and GPQA/HLE for post training), I think we will slowly phase out of benchmarks such as this in the next years, for 2 reasons.
+
+1. They are becoming more and more indecipherable for humans: questions are becoming so complex that it's almost impossible for non experts to understand what performance on each question means (and to make sure the datasets themselves do not contain mistakes)
+2. Now that our models are connected to tools, such as internet access, latent knowledge evaluations are increasingly becoming web search and retrieval evaluations, so they make less sense as such. In short, we're moving from closed book to open book evaluations. As a comparison, in the French school system, you get closed books examinations in high school, but as you enter university, it's often assumed that you will get access to databases, internet, and scoring becomes less about what you learnt by heart, and more about how you reason given free access to information. I believe this is also a change we will see in LLM evaluation with the increase of model capabilities.
+
+### Math
+Math evaluation datasets have been used as proxies for reasoning and logic benchmarking, independently of, obviously, also checking if models can solve math problems. 
+
+The two reference math evaluation datasets were [GSM8K](https://arxiv.org/abs/2110.14168) (2021), containing grade school math problems and [MATH](https://arxiv.org/abs/2103.03874) (2021), an aggregation of Olympiad problems present on the web, which reached saturation/contamination in the last years. The former was extended by [GSM1K](https://arxiv.org/abs/2405.00332) (2024), a recreation with 1K new problems, to test which models were contaminated on the former, [GSM-Plus](https://arxiv.org/pdf/2402.19255), a rewriting of models with adversarial changes (distractors, numerical variations, and so forth) and [GSM-Symbolic](https://arxiv.org/abs/2410.05229) (2024), less used, but a very interesting re-writing of GSM8K as problem templates, to prevent contamination: problems can be regenerated ad infinitum.
+
+Community has now been focusing on using:
+- The follow ups to MATH, either [**MATH-500**](https://huggingface.co/datasets/HuggingFaceH4/MATH-500) (a representative subset of 500 problems sampled to avoid overfitting) and MATH-Hard (only the 500 hardest questions)
+- **AIME** ([24](https://huggingface.co/datasets/HuggingFaceH4/aime_2024), [25](https://huggingface.co/datasets/math-ai/aime25)), american olympiad datasets for high schoolers, taken as is at publication. These datasets are interesting because, since they are made of problems renewed every year with equivalent difficulty, they allow testing for contamination by comparing results at publication with results on the previous year's dataset
+- [**Math-Arena**](https://matharena.ai/), an up to date compilation of competitions and olympiads actualised regularly (it contains AIME25, but a lot of other competitions too!)
+
+Most of these datasets are actually no longer "that hard", since they stop at grade school level (even though GSM-Symbolic allows to generate problems with more recursion levels, making them synthetically harder). On the other side of the spectrum, [FrontierMath](https://arxiv.org/abs/2411.04872) (2024) was an attempt at providing considerably harder math problems, written individually by mathematicians for the occasion. The dataset was theoretically private (but it appeared OpenAI has had access to parts of the dataset - such a shame). [Humanity's Last Exam](https://agi.safe.ai/) (2025) (introduced in the knowledge section) also contains interesting “made for the occasion” math problems requiring complex reasoning (notably some theorem proving).
+
+I would personally use AIME25 and MATH-500 for pretraining evaluations, and the Math-Arena for post training. 
+
+### Code 
+Since agents need to interact with tools, they need coding abilities, either to call tools directly if they are code agents, or understand how to debug tool output in case of problems (for code and json agents both, see the difference [here](https://huggingface.co/learn/agents-course/en/unit2/smolagents/tool_calling_agents)). Coding evaluation sets are also good proxies for reasoning.
+
+Historically in 2021, code evaluation sets were [MBPP](https://arxiv.org/abs/2108.07732), 1K crowdsourced Python only entry-level programming problems, [APPS](https://arxiv.org/abs/2105.09938), 10K code generation problems curated from programming interviews and sharing websites, and [HumanEval](https://arxiv.org/abs/2107.03374), introduced with the Codex model, which contrary to the previous is made of "specifically made for the release" problems, which was super neat then! It also came with a sandbox to avoid problematic code execution on the evaluator's machine. (Last thing this paper introduced was an estimator for `pass@k`, which before that was computed with a literal check on whether an evaluation was a success more than k times on n).
+
+
+The [EvalPlus](https://openreview.net/pdf?id=1qvx610Cu7) (2023) team made HumanEval+ and MBPP+, extensions of the former, by adding more test cases and fixing bugs in the original datasets as well as adding more inputs. [EvoEval](https://arxiv.org/abs/2403.19114) (2024) also introduced a variation on HumanEval by semantically rewriting the problems and adding difficulty labeling. 
+
+[**LiveCodeBench**](https://arxiv.org/abs/2403.07974) (2024) follows a similar "grabbing from leetcode websites" approach, but is very interesting because it stores the problem date, to compare model performance on problems created before and after they finished training. This was an excellent contamination free benchmark, and I'm looking forward to an update!
+
+[**AiderBench**](https://aider.chat/docs/leaderboards/) (online since end of 2024 I think?) also uses data from existing coding websites (Exercism to be specific), but goes beyond problem solving by testing specifically code editing and refactoring.
+
+A couple benchmarks then moved beyond evaluation on standalone problems, which were not evaluating complex coding abilities. [RepoBench](https://arxiv.org/abs/2306.03091) (2023) tests repository level auto completion systems in Python or Java, using code from Github as source. It was built by masking random lines in code bases and asking for completions, either a cross file or in file function, and defines several tests level (retrieval, completion, a combination). 
+
+[**SweBench**](https://openreview.net/pdf?id=VTF8yNQM66) (2024) is a more well known and complete version of this, also using github, but this time testing if models can solve existing issues, so logic understanding, cross file editing and execution, long context reasoning, etc.
+
+At this time, I would recommend following LiveCodeBench, AiderBench and the higher quality subset of SWE-Bench (SWE-Bench verified), and reading the [METR report](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) on actual code assistant usefulness.
+
+### Long context
+To correctly interact with users over a long discussion, without losing track, you need good long context management. (Funny to think that 3 years ago, maximum context lengths for models were 2048 tokens, when now we're largely at 128K and beyond).
+
+The evaluation which started testing this in 2023 is probably [NIAH](https://github.com/gkamradt/LLMTest_NeedleInAHaystack), (Needle in a Haystack), where you place a random fact in a long unrelated text and ask the model to retrieve it. It provides a neat framework to evaluate where in the context a model is most likely to forget stuff, and from which context length. In 2023 models were really bad at it, in 2025 it's close to solved.
+
+More complex long context extensions have emerged since. [RULER](https://arxiv.org/pdf/2404.06654) (2024) adds multi-hop tracing (requiring the model to follow chains of variables to get the correct value), word frequency changes, and adds a QA variation of NIAH. it's also close to solved now. [Michelangelo](https://arxiv.org/pdf/2409.12640v2) (2024, also sometimes called MRCR for multi round co reference) is also using synthetic long context data: tasks (of varying length) test whether models can reproduce precisely unique portions of the context (as well as identify if relevant information is present) and understand sequence of modifications to a text. It was then extended in the [OpenAI MRCR](https://huggingface.co/datasets/openai/mrcr) (2025). [InfinityBench](https://arxiv.org/abs/2402.13718) (2024) is multilingual (En and Zh), and provides 100K tokens synthetic data tasks, across a variety of objectives (QA, retrieval as in NIAH, computations over very long context, ...). InfinityBench still provides some signal.
+
+[**HELMET**](https://arxiv.org/abs/2410.02694) (2024) combines tasks and existing benchmarks to get a big single dataset with more signal: RAG and QA datasets (Natural questions, TriviaQA, PopQA, HotpotQA, Narrative QA and InfinityBench), recall (RULER and JSONKV), generation with citation (subsets of ALCE), summarisation, reranking passages (MS MARCO), in context learning (TREC, NLU, Banking77, CLINIC150). Benchmark aggregations are exhaustive but present the risk of measuring things two times : don't go testing your model against both HELMET and InfinityBench, then aggregating the results, for example, as you would run the same evaluation twice! In 2025, it still has enough discriminative power to compare models.
+
+My favorite long context evaluations ideas are the [Novel Challenge](https://arxiv.org/abs/2406.16264) (2024), 1K true/false claims about fictional books published in the last year (by readers of said books!) requiring having read and understood the full text to answer properly, and the [**Kalamang translation dataset**](https://arxiv.org/abs/2309.16575) (2024), where models need to properly translate from English to Kalamang from reading a grammar book (Kalamang is such a low resource language that it has no online presence - only 200 speakers). The Kalamang translation set could notably be expanded to other low resource languages (but it would be cool to expand to use a rule based grammar checker to test generation validity to get strict accuracy instead of relying on BLEU...).
+
+### Instruction Following
+The two main instruction following datasets are [**IFEval**](https://arxiv.org/abs/2311.07911) (2023) and its extension [**IFBench**](https://arxiv.org/abs/2507.02833) (2025). IFEval is one of the smartest evaluation ideas in the last years, in my opinion: models are asked to follow formatting instructions (about keywords, punctuation, number of words/sentences, file type formatting such as markdown or html, etc). Each of these conditions can be checked with a specific parsing test: this means that this evaluation is one of the rare free form generative evaluation where you can get a strict score without relying on a model judge. 
+
+More generally, it falls into the functional correctness/unit test evaluation type, which is my personal favorite way to evaluate models. It's also very easy to regenerate or extend to prevent contamination.
+
+Side note, but some benchmarks also test "non instruction following" (non compliance): [CoCoNot](https://www.arxiv.org/pdf/2407.12043) (2024) notably tests if models will or won't comply with incomplete (underspecified/unclear), unanswerable (by lack of information or AI-humanizing, often hallucinations triggering), or unsafe requests. It used manual queries writing, models to write non compliants requests, then filtered to create an eval set presented as a classification problem.
+
+### Tool-calling
+The emergence of tools is one of the features which started moving LLMs into the agentic realm.
+
+[**TauBench**](https://arxiv.org/pdf/2406.12045) (2024) evaluates a model on its ability to answer a user's query in the retail and airline domains (order/book/look for products/etc). The database mimics real domain data with synthetic samples, and the model is considered correct when 1) its actions updated the database correctly and 2) it answered the user appropriately. To make this benchmark automatic, the user is mocked up by an LLM, which makes this evaluation quite costly to run and prone to errors. Despite these limitations, it's quite used, notably because it reflects real use cases well.
+
+[ToolBench](https://arxiv.org/pdf/2305.16504) (2023) require calling APIs (OpenWeather, Cat, HomeSearch, TripBooking, GoogleSheets, WebShop, Tabletop, etc) to solve 100 test cases across dataset, requiring between one and 10 tool calls to solve. Some of these APIs are mock ups and some of them are real, which makes the dataset susceptible to accidental failure. It was therefore fixed and extended in [StableToolBench](https://arxiv.org/pdf/2403.07714) (2025), which introduces a general VirtualAPIServer mocking up everything to ensure evaluation stability, however relying on an LLM judge for evaluation, introducing another layer of bias.
+
+[**BFCL**](https://openreview.net/pdf?id=2GmDdhBdDk) (2025, but the benchmark actually has a couple years) evolved considerably over the year, and in its current version contains 4 subset: single turn (simple tool calls), crowdsourced real life function calls from users, multiturn conversations (to test accuracy in long context and query answering with tool calls) and agentic (web search, memory, sql data interaction). It's using a combination of Abstract Syntax Trees, execution response and state matching (is the final state the expected one) to evaluate if calls are correct. People are focusing on the v3 to test tool calling specifically, and the v4 tests web and search tool use.
+
+Lastly, with the creation of MCPs, some benchmarks arose to test MCP oriented tool calling - however all mostly relying on model judges, and using real world APIs, which can introduce potential failure cases/lack of reproducibility due to network issues (seems like added load for website creators is not too much of an issue as the userbase of most MCP covered is big enough).
+
+[MCPBench](https://arxiv.org/abs/2508.20453) (2025) connects LLMs to live, real world MCP servers (Wikipedia, HF, Reddit, Steam, arxiv, ...) with tasks requiring multiple turns to solve (created synthetically). The evaluation combines rule based checks on tool call validity and success with an LLM judge to assess if queries were properly answered. 
+
+[**MCP-Universe**](https://arxiv.org/abs/2508.14704) (2025) uses 11 MCP servers across varied real world topics (IRL navigation, 3D design, web search, etc). What’s cool in this one is that evaluation relies on several strict evaluators, one for format correctness, and two for answer correctness: as tasks can be static (asking things that do not change) or dynamic (github stars in a repo, weather, …), in the latter case answer correctness uses a task-dependant execution based evaluation framework which grabs the latest correct answer from the relevant source automatically and compares the model output to it. This is way neater than relying on LLM judge! 
+
+[**LiveMCPBench**](https://arxiv.org/abs/2508.01780) (2025) provides a large locally deployable collection of MCP servers to test how good models are at discriminating between tools to accomplish tasks. Best models are already reaching 80% - so we're close to saturation. However, testing if models can select proper tools in very long lists is a good use case which will be increasingly important as the web goes mcp.
+
+(By the way, here's a cool [doc](https://www.anthropic.com/engineering/writing-tools-for-agents) on how to write good tools.)
+
+While testing individual capabilities provides valuable signal, real-world assistant performance comes from how these capabilities combine. A model might excel at reasoning but fail when that reasoning must be integrated with tool calling and long context management simultaneously, so we need evaluations requiring the orchestration of multiple capabilities together.
+
+## Assistant tasks
+I believe that **assistant tasks** are going to be one of the main ways to do next level evaluations: solving them requires a combination of many capabilities (long context, reasoning, tool calling, ...), while the benchmarks themselves provide insight on specific domains performance in a useful real world setup. They also tend to be more understandable (by the general public) than specific capabilities benchmarks. If the benchmarks are general enough, they do not check which precise tools were used, but instead if the end result is correct, as complex tasks allow several paths to success.
+
+### Real life information retrieval
+[**GAIA**](https://arxiv.org/abs/2311.12983) (2023) kickstarted modern agentic evaluation by requiring models to use a combination of tools, reasoning and retrieval to solve real life queries (sometimes including documents). Questions were split in 3 levels, the first one now saturated and the third one still hard for models. It's also one of these benchs were numbers you find will be spread out against evaluation methods, because people are either reporting on the public validation set or using llm judges to evaluate against the private test set (when there is a public leaderboard [here](https://huggingface.co/spaces/gaia-benchmark/leaderboard)).
+
+It was later replicated in [BrowseComp](https://cdn.openai.com/pdf/5e10f4ab-d6f7-442e-9508-59515c65e35d/browsecomp.pdf) (2025) which tests the same thing (can a model find the adequate answer to a specific query using tools and online information) but does not guarantee uniqueness of result, as questions were constructed by starting from the result and building a question from it, with varying levels of difficulty: for example, from a specific paper to retrieve, a question will be created by combining information about metadata, for example "which paper about Topic was published at Conference with one Nationality author and two people from Entity?" However, the benchmark is probably also harder at the moment.
+
+### Science assistants
+[SciCode](https://arxiv.org/abs/2407.13168) (2024) tests if models can solve real life scientific problems by writing appropriate scientific code, across stem fields (from biology to math/chem/...). Problems are drawn from real life workflows, and each core issue is decomposed in easier subproblems. For the first version, evaluation was done by scientists and a model judge - models were quite bad at it at publication (less than 5% scores) but I'm unsure where up to date results can be found.
+
+[PaperBench](https://arxiv.org/abs/2504.01848) (2025) similarly tests if models can replicate ML research, but this time with a harder setup: given ICML high quality papers, models must reconstruct the matching code base (8K individually graded tasks have been contributed by the authors of said papers, grouped as rubric trees with weighting for the final grades). Benchmark is evaluated with an LLM judge (though I suspect some of it could be done automatically by constraining a bit the shape of the code asked for).
+
+[DSBench](https://arxiv.org/pdf/2409.07703) (2025) is a multimodal data analysis benchmark using Kaggle and ModelOff (financial data) samples. From the examples in Appendix it seems that questions from ModelOff are provided in a multiple choice setup, which likely makes the task easier, where the Kaggle tasks each have their own metric. 
+
+[**DABStep**](https://arxiv.org/abs/2506.23719) (2025) evaluates model on previously private (therefore uncontaminated) operational data analysis workloads using real life questions and data. All problems require multi step reasoning and varied document parsing, as well of course as specific data manipulation skills. It's a neat eval because it's hard and replicates actually useful real world use cases, and because each problem has a ground truth, so evaluation is unbiased and not too costly.
+
+Assistant tasks test integrated capabilities in realistic scenarios, but they're either dynamic and read only, or static in environment which doesn't change. To evaluate adaptability and dynamic decision-making, we need environments that can "surprise" the model.
+
+## Game based evaluations
+**Game-based** benchmarks are very interesting for several reasons: they usually evaluate adaptability to a changing environment (contrary to most assistant tasks which are static), require long context reasoning, and last but not least, are **understandable** by most people. However, they are not grounded in real life nor necessary reflecting good performance on actually useful use cases.
+
+The most famous formal evaluation among these is probably [ARC-AGI](https://arcprize.org/arc-agi). The first version (2019) was made of puzzles grids in a sequence, where models had to find the last item of said sequence without explicit rules being provided. This benchmark is to me very reminiscent of logic-oriented IQ tests, and it was almost solved in 2024. A similar benchmark (extrapolation of rules) is [Baba is AI](https://arxiv.org/abs/2407.13729) (2024). The latest version of the bench, ARC-AGI3 (2025, ongoing), is still in development, and contains entire new games (requiring exploration, complex planning, memory management, ...) made specifically for the benchmark. It is still ongoing, and current best solutions on available problems are bruteforcing the games. 
+
+The community and model providers have explored a number of existing games with LLMs. Single player adventure games/RPGs like [TextQuests](https://huggingface.co/blog/textquests) (2025) or [Pokemon](https://github.com/benchflow-ai/benchflow/tree/main/libs/pokemon-gym) (2024) (Twitch for [Claude](https://www.twitch.tv/claudeplayspokemon) and [Gemini](https://www.twitch.tv/gemini_plays_pokemon) for ex) require a combination of very long range planning to get objectives, which require adequante long context memory management, reasoning, and backtracking abilities. Same abilities are needed for single player survival games like [Crafter](https://arxiv.org/abs/2109.06780) (2021, Minecraft inspired). A number of single player game environments have been integrated into the [Balrog](https://arxiv.org/pdf/2411.13543) (2024) benchmark.
+
+Competitive bluffing games like [Poker](https://arxiv.org/html/2501.08328v1) (2025) or Mafia variations like [Town of Salem](https://github.com/summersonnn/Town-Of-Salem-with-LLMs) (2025) and Werewolf (2025, [here](https://arxiv.org/abs/2407.13943)/[there](https://werewolf.foaster.ai/)) are very interesting to test logic, reasoning, as well as deception abilities. Claude Opus 4 is for example incapable of winning Town of Salem as a vampire (deceptive role) but does well as a peasant (non deceptive role). Cooperative games like Hanabi can also be used to test adaptability and communication ability in a constrained environment.
+
+What's also very neat about these is that they have a single and unambiguous pass/fail metric: did the LLM win the game or not? At the moment, if I were to use these to evaluate models I would probably look at TextQuests for abilities and Town of Salem for safety.
+
+Beyond testing capabilities in controlled environments, there's one type of evaluation that's inherently impossible to game: predicting the future. (Ok it's a tangent but I find these super fun and they could be relevant!)
+
+## Forecasters
+In the last year, a new category of impossible to contaminate tasks emerged: forecasting. (I guess technically forecasting on the stock markets can be cheated on by some manipulation but hopefully we're not there yet in terms of financial incentives to mess up evals). They should require a combination of reasoning across sources to try to solve questions about not yet occuring events, but it's uncertain that these benchmarks are discriminative enough to have strong value, and they likely reinforce the "slot machine success" vibe of LLMs. (Is the performance on some events close to random because they are impossible to predict or because models are bad at it? In the other direction, if models are able to predict the event correctly, is the question too easy or too formulaic?)
+
+[FutureBench](https://huggingface.co/blog/futurebench) tests if models can predict future news-worthy events. It uses 2 sources: browsing and an LLM generating questions with a weekly time horizon, and user predictions from betting markets. All data is heavily filtered and cleaned before use. For now, models are barely better than random on human created bets, and succeed 3/4th of the time on model generated questions (likely easier).
+
+[FutureX](https://arxiv.org/abs/2508.11987) is similar, but uses an array of specific websites (prediction parkets, government websites, general ranking websites and real time data platforms), then uses templates to generate questions about potential future events (`when will STOCK reach POINT?`). 500 questions are generated daily, with filtering of accidentally irrelevant questions. 
+
+A similar approach is used to generate questions in [Arbitrage](https://arxiv.org/pdf/2412.18544), the core difference being the time horizon: events there should be resolved in 2028.
+
+## Conclusion: Building better agents through evaluation
+
+The landscape of evaluation has evolved with the jumps in capabilities, from testing isolated skills to measuring integrated performance in more realistic scenarios. 
+
+As of Sept 2025, I recommend using:
+
+**Core capabilities** (for model builders): Old capabilities evals for training, and for post training MATH500, GPQA, IFEval, SWE-Bench, a long range eval of your choice like HELMET, TauBench or BFCL if you're targetting tool use
+**Core capabilities** (for comparing models at inference): IFBench, HLE, MathArena, AiderBench and LiveCodeBench, MCP-Universe
+**Long horizon tasks** (for real-world performance): GAIA, DABStep, SciCode, or domain specific evaluations for your use cases
+**Games** (for some extra fun in measuring robustness and adaptability): ARC-AGI3 when it's out, TextQuests, Town of Salem if you're interested in safety, or any other game you like which goes beyond Poker/Chess/Go.
+
+The field is moving toward evaluations that test capability orchestration rather than isolated skills for actual use. This matches our goal of building models that "work well"—systems that can reliably combine core capabilities, tool use, with a good orchestration to solve actual problems.
+
+Side note: I hope the field moves towards putting more emphasis on functional testing rather than model judges, and generally understandable datasets and tasks. 
