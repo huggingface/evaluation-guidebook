@@ -11,6 +11,8 @@ Whether working with production models, a researcher or a hobbyist, I hope you'l
   You'll also find explanations to support you about important LLM topics in `General knowledge`: for example, how model inference works and what tokenization is.
 - **Advanced user**:
   The more practical sections are the `Tips and Tricks` ones, and `Troubleshooting` chapter. You'll also find interesting things in the `Designing` sections.
+- **User coming back to the site**: 
+  Every year I do a dive on a topic, check them out!
 
 In text, links prefixed by ⭐ are links I really enjoyed and recommend reading.
 
@@ -47,20 +49,17 @@ If you're an advanced user, I suggest skimming to the `Going further` sections.
 - [Model inference and evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/general-knowledge/model-inference-and-evaluation.md)
 - [Tokenization](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/general-knowledge/tokenization.md)
 
-### Examples
-You'll also find examples as jupyter notebooks, to get a more hands on experience of evaluation if that's how you learn!
-- [Comparing task formulations during evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/examples/comparing_task_formulations.ipynb): This notebook walks you through how to define prompt variations for a single task, run the evaluations, and analyse the results.  
-
-## Planned next articles
-- contents/automated-benchmarks/Metrics -> Description of automatic metrics
-- contents/Introduction: Why do we need to do evaluation?
-- contents/Thinking about evaluation: What are the high level things you always need to consider when building your task?
-- contents/Troubleshooting/Troubleshooting ranking: Why comparing models is hard
 
 ## Resources
 Links I like
-- [About evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About%20evaluation.md)
-- [About NLP](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/About%20NLP.md)
+- [About evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/about-evaluation.md)
+- [About general NLP](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/about-NLP.md)
+- [The UltraScale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook)
+
+## Yearly dives
+- [2023, year of Open Source](https://github.com/huggingface/evaluation-guidebook/blob/main/yearly_dives/2023-year-of-open-source.md)
+- [2024, what should evaluation be for?](https://github.com/huggingface/evaluation-guidebook/blob/main/yearly_dives/2024-evals-thoughts-from-iclr.md)
+- [2025, a dive in current reference evals (with an agentic focus)](https://github.com/huggingface/evaluation-guidebook/blob/main/yearly_dives/2025-agentic-evaluations.md)
 
 ## Thanks
 This guide has been heavily inspired by the [ML Engineering Guidebook](https://github.com/stas00/ml-engineering) by Stas Bekman! Thanks for this cool resource!
@@ -68,8 +67,7 @@ This guide has been heavily inspired by the [ML Engineering Guidebook](https://g
 Many thanks also to all the people who inspired this guide through discussions either at events or online, notably and not limited to:
 - 🤝 Luca Soldaini, Kyle Lo and Ian Magnusson (Allen AI), Max Bartolo (Cohere), Kai Wu (Meta), Swyx and Alessio Fanelli (Latent Space Podcast), Hailey Schoelkopf (EleutherAI), Martin Signoux (Open AI), Moritz Hardt (Max Planck Institute), Ludwig Schmidt (Anthropic)
 - 🔥 community users of the Open LLM Leaderboard and lighteval, who often raised very interesting points in discussions
-- 🤗 people at Hugging Face, like Lewis Tunstall, Omar Sanseviero, Arthur Zucker, Hynek Kydlíček, Guilherme Penedo and Thom Wolf,
-- of course my team ❤️ doing evaluation and leaderboards, Nathan Habib and Alina Lozovskaya.
+- 🤗 people at Hugging Face, like Lewis Tunstall, Hynek Kydlíček, Guilherme Penedo and Thom Wolf, and of course my teammate Nathan Habib with whom I've been doing evaluation and leaderboards since 2022
 
 ## Citation
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
