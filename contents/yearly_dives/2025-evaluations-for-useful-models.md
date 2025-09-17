@@ -138,13 +138,13 @@ In the last year, a new category of impossible to contaminate tasks emerged: for
 
 A similar approach is used to generate questions in [Arbitrage](https://arxiv.org/pdf/2412.18544), the core difference being the time horizon: events there should be resolved in 2028.
 
-## Conclusion: Building better agents through evaluation
+## Getting actually useful models through evaluation
 
 The landscape of evaluation has evolved with the jumps in capabilities, from testing isolated skills to measuring integrated performance in more realistic scenarios. 
 
 As of Sept 2025, I recommend using:
 
-**Core capabilities** (for model builders): Old capabilities evals for training, and for post training MATH500, GPQA, IFEval, SWE-Bench, a long range eval of your choice like HELMET, TauBench or BFCL if you're targetting tool use
+**Core capabilities** (for model builders): Old capabilities evals for training, and for post training MATH500/AIME24, GPQA, IFEval, SWE-Bench, a long range eval of your choice like HELMET, TauBench or BFCL if you're targetting tool use
 **Core capabilities** (for comparing models at inference): IFBench, HLE, MathArena, AiderBench and LiveCodeBench, MCP-Universe
 **Long horizon tasks** (for real-world performance): GAIA, DABStep, SciCode, or domain specific evaluations for your use cases
 **Games** (for some extra fun in measuring robustness and adaptability): ARC-AGI3 when it's out, TextQuests, Town of Salem if you're interested in safety, or any other game you like which goes beyond Poker/Chess/Go.

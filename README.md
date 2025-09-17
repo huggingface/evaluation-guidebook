@@ -59,7 +59,7 @@ Links I like
 ## Yearly dives
 - [2023, year of Open Source](https://github.com/huggingface/evaluation-guidebook/blob/main/yearly_dives/2023-year-of-open-source.md)
 - [2024, what should evaluation be for?](https://github.com/huggingface/evaluation-guidebook/blob/main/yearly_dives/2024-evals-thoughts-from-iclr.md)
-- [2025, a dive in current reference evals (with an agentic focus)](https://github.com/huggingface/evaluation-guidebook/blob/main/yearly_dives/2025-agentic-evaluations.md)
+- [2025, evaluations to build "real life" useful models](https://github.com/huggingface/evaluation-guidebook/blob/main/yearly_dives/2025-evaluations-for-useful-models.md)
 
 ## Thanks
 This guide has been heavily inspired by the [ML Engineering Guidebook](https://github.com/stas00/ml-engineering) by Stas Bekman! Thanks for this cool resource!
