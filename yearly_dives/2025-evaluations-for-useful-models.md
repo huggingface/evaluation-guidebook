@@ -105,6 +105,8 @@ I believe that **assistant tasks** are going to be one of the main ways to do ne
 
 It was later replicated in [BrowseComp](https://cdn.openai.com/pdf/5e10f4ab-d6f7-442e-9508-59515c65e35d/browsecomp.pdf) (2025) which tests the same thing (can a model find the adequate answer to a specific query using tools and online information) but does not guarantee uniqueness of result, as questions were constructed by starting from the result and building a question from it, with varying levels of difficulty: for example, from a specific paper to retrieve, a question will be created by combining information about metadata, for example "which paper about Topic was published at Conference with one Nationality author and two people from Entity?" However, the benchmark is probably also harder at the moment.
 
+Lastly, [GAIA2](https://huggingface.co/blog/gaia2) went beyond simple information retrieval, using a mock up mobile environment to test how assistants are able to answer correctly answer queries relying on chains of events and tool calls. As of now, time sensitive and deliberately noisy subsets (mocking up failing API calls) are the hardest for models, when search and execution seem extremely easy for SOTA models.  
+
 ### Science assistants
 [SciCode](https://arxiv.org/abs/2407.13168) (2024) tests if models can solve real life scientific problems by writing appropriate scientific code, across stem fields (from biology to math/chem/...). Problems are drawn from real life workflows, and each core issue is decomposed in easier subproblems. For the first version, evaluation was done by scientists and a model judge - models were quite bad at it at publication (less than 5% scores) but I'm unsure where up to date results can be found.
 
