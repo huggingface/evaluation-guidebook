@@ -49,6 +49,10 @@ If you're an advanced user, I suggest skimming to the `Going further` sections.
 - [Model inference and evaluation](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/general-knowledge/model-inference-and-evaluation.md)
 - [Tokenization](https://github.com/huggingface/evaluation-guidebook/blob/main/contents/general-knowledge/tokenization.md)
 
+## Yearly dives
+- [2023, year of Open Source](https://github.com/huggingface/evaluation-guidebook/blob/main/yearly_dives/2023-year-of-open-source.md)
+- [2024, what should evaluation be for?](https://github.com/huggingface/evaluation-guidebook/blob/main/yearly_dives/2024-evals-thoughts-from-iclr.md)
+- [2025, evaluations to build "real life" useful models](https://github.com/huggingface/evaluation-guidebook/blob/main/yearly_dives/2025-evaluations-for-useful-models.md)
 
 ## Resources
 Links I like
@@ -56,10 +60,10 @@ Links I like
 - [About general NLP](https://github.com/huggingface/evaluation-guidebook/blob/main/resources/about-NLP.md)
 - [The UltraScale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook)
 
-## Yearly dives
-- [2023, year of Open Source](https://github.com/huggingface/evaluation-guidebook/blob/main/yearly_dives/2023-year-of-open-source.md)
-- [2024, what should evaluation be for?](https://github.com/huggingface/evaluation-guidebook/blob/main/yearly_dives/2024-evals-thoughts-from-iclr.md)
-- [2025, evaluations to build "real life" useful models](https://github.com/huggingface/evaluation-guidebook/blob/main/yearly_dives/2025-evaluations-for-useful-models.md)
+## Community translations
+This guide has been kindly community translated!
+🇨🇳 https://github.com/huggingface/evaluation-guidebook/tree/main/translations/zh/contents, thanks to @SuSung-boy 
+🇫🇷 https://huggingface.co/spaces/CATIE-AQ/Guide_Evaluation_LLM, thanks to @lbourdois
 
 ## Thanks
 This guide has been heavily inspired by the [ML Engineering Guidebook](https://github.com/stas00/ml-engineering) by Stas Bekman! Thanks for this cool resource!
@@ -68,6 +72,8 @@ Many thanks also to all the people who inspired this guide through discussions e
 - 🤝 Luca Soldaini, Kyle Lo and Ian Magnusson (Allen AI), Max Bartolo (Cohere), Kai Wu (Meta), Swyx and Alessio Fanelli (Latent Space Podcast), Hailey Schoelkopf (EleutherAI), Martin Signoux (Open AI), Moritz Hardt (Max Planck Institute), Ludwig Schmidt (Anthropic)
 - 🔥 community users of the Open LLM Leaderboard and lighteval, who often raised very interesting points in discussions
 - 🤗 people at Hugging Face, like Lewis Tunstall, Hynek Kydlíček, Guilherme Penedo and Thom Wolf, and of course my teammate Nathan Habib with whom I've been doing evaluation and leaderboards since 2022
+
+and of course to all the contributors :)
 
 ## Citation
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
