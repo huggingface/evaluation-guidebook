@@ -62,8 +62,8 @@ Links I like
 
 ## Community translations
 This guide has been kindly community translated!
-🇨🇳 https://github.com/huggingface/evaluation-guidebook/tree/main/translations/zh/contents, thanks to @SuSung-boy 
-🇫🇷 https://huggingface.co/spaces/CATIE-AQ/Guide_Evaluation_LLM, thanks to @lbourdois
+- 🇨🇳 https://github.com/huggingface/evaluation-guidebook/tree/main/translations/zh/contents, thanks to @SuSung-boy 
+- 🇫🇷 https://huggingface.co/spaces/CATIE-AQ/Guide_Evaluation_LLM, thanks to @lbourdois
 
 ## Thanks
 This guide has been heavily inspired by the [ML Engineering Guidebook](https://github.com/stas00/ml-engineering) by Stas Bekman! Thanks for this cool resource!
