@@ -1,5 +1,9 @@
 # The LLM Evaluation guidebook ⚖️
 
+!! THIS GUIDEBOOK IS NO LONGER MAINTAINED. THE LATEST AND MOST UP TO DATE VERSION (as of Dec 2025) OF IT LIVES HERE: https://huggingface.co/spaces/OpenEvals/evaluation-guidebook
+
+-------------------------------
+
 If you've ever wondered how to make sure an LLM performs well on your specific task, this guide is for you! 
 It covers the different ways you can evaluate a model, guides on designing your own evaluations, and tips and tricks from practical experience.
 
